@@ -15,3 +15,4 @@ Apuntamos a un público con ideas nuevas y frescas. Gente de mente juvenil con g
 
 - El grupo está compuesto por -
 . Joaquín Dimitrijevich: 28 años. Diseñador gráfico. Amante del deporte. Jugador de Rugby en Club Manuel Belgrano. Actualmente incursionando en el mundo de la programación.
+. Martín Zanitto: 30 años. Analista funcional / Tester. Con la idea de convertirme en Dev jaja
