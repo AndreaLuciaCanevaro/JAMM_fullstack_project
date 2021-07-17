@@ -17,3 +17,4 @@ Apuntamos a un público con ideas nuevas y frescas. Gente de mente juvenil con g
 . Joaquín Dimitrijevich: 28 años. Diseñador gráfico. Amante del deporte. Jugador de Rugby en Club Manuel Belgrano. Actualmente incursionando en el mundo de la programación.
 . Martín Zanitto: 30 años. Analista funcional / Tester. Con la idea de convertirme en Dev jaja
 . Martín Taddia: 29 años. Licenciado en Turismo. De Rosario, viviendo en Buenos Aires. Con interés en formarme en el área de programación.
+. Andrea Lucía Canevaro: 34 años. Contadora y profesora de economía. Yogui, salsera y próximamente nómade digital. 
