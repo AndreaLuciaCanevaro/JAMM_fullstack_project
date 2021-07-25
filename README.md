@@ -11,14 +11,24 @@ Disfrutá de la evolución que sólo te puede brindar JAMM Gaming.
 ¡Bienvenidos!
 
 - El grupo está compuesto por -
-. Joaquín Dimitrijevich: 28 años. Diseñador gráfico. Amante del deporte. Jugador de Rugby en Club Manuel Belgrano. Actualmente incursionando en el mundo de la programación.
-. Martín Zanitto: 30 años. Analista funcional / Tester. Con la idea de convertirme en Dev jaja
-. Martín Taddia: 29 años. Licenciado en Turismo. De Rosario, viviendo en Buenos Aires. Con interés en formarme en el área de programación.
-. Andrea Lucía Canevaro: 34 años. Contadora y profesora de economía. Yogui, salsera y próximamente nómade digital. 
+<ul>
+<li>. Joaquín Dimitrijevich: 28 años. Diseñador gráfico. Amante del deporte. Jugador de Rugby en Club Manuel Belgrano. Actualmente incursionando en el mundo de la programación.</li>
+<li>. Martín Zanitto: 30 años. Analista funcional / Tester. Con la idea de convertirme en Dev </li>
+<li>. Martín Taddia: 29 años. Licenciado en Turismo. De Rosario, viviendo en Buenos Aires. Con interés en formarme en el área de programación. </li>
+<li>. Andrea Lucía Canevaro: 34 años. Contadora y profesora de economía. Yogui, salsera y próximamente nómade digital. </li>
+</ul>
 
-Páginas web referentes:
-Modelo de diseño de página, distribución de funciones. Similar al objeto de JAMM
+Páginas web de referencia:
+
+- Modelo de diseño de página, distribución de funciones. Similar al objeto de JAMM
+
 https://www.necxus.com.ar/
+
 https://www.xtr.com.ar/
-Tomamos el modelo de carrito de: https://www.electronicthings.com.ar/carrito
-Para el ingreso y registro nos basamos en: https://www.mercadolibre.com/jms/mla/lgz/msl/login/H4sIAAAAAAAEAzWOwQrDIBBE_2XOktw99kdk[…]3m9BRefC0LyQoD4Zi6svC8oHIwLoNAXZ0K-RfsZNcNDT0udcQAAAA/user
+
+-Tomamos el modelo de carrito de: https://www.electronicthings.com.ar/carrito
+
+- Para el ingreso y registro nos basamos en: https://www.mercadolibre.com/jms/mla/lgz/msl/login/H4sIAAAAAAAEAzWOwQrDIBBE_2XOktw99kdk[…]3m9BRefC0LyQoD4Zi6svC8oHIwLoNAXZ0K-RfsZNcNDT0udcQAAAA/user
+
+- Otra página web muy completa en cuanto a funcionalidades es:
+https://www.amazon.com/-/es/ref=nav_logo
