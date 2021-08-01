@@ -28,3 +28,7 @@ https://www.xtr.com.ar/</li>
 <li> Para el ingreso y registro nos basamos en: https://www.mercadolibre.com/jms/mla/lgz/msl/login/H4sIAAAAAAAEAzWOwQrDIBBE_2XOktw99kdk[…]3m9BRefC0LyQoD4Zi6svC8oHIwLoNAXZ0K-RfsZNcNDT0udcQAAAA/user </li>
 <li> Otra página web muy completa en cuanto a funcionalidades es:
 https://www.amazon.com/-/es/ref=nav_logo </li>
+
+<br/>
+<p>Tablero de trabajo Trello</p>
+https://trello.com/invite/b/DKZJQHdR/0cc5d692b9574251c97e72c32ade2332/jamm
