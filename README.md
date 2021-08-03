@@ -18,7 +18,7 @@ Disfrutá de la evolución que sólo te puede brindar JAMM Gaming. </br>
 <li> Andrea Lucía Canevaro: 34 años. Contadora y profesora de economía. Yogui, salsera y próximamente nómade digital. </li>
 </ul>
 
-<p> Páginas web de referencia:</p>
+<p> Sitios web de referencia:</p>
 
 <ul>
 <li> Modelo de diseño de página, distribución de funciones. Similar al objeto de JAMM
@@ -26,7 +26,7 @@ https://www.necxus.com.ar/
 https://www.xtr.com.ar/</li>
 <li>Tomamos el modelo de carrito de: https://www.electronicthings.com.ar/carrito </li>
 <li> Para el ingreso y registro nos basamos en: https://www.mercadolibre.com/jms/mla/lgz/msl/login/H4sIAAAAAAAEAzWOwQrDIBBE_2XOktw99kdk[…]3m9BRefC0LyQoD4Zi6svC8oHIwLoNAXZ0K-RfsZNcNDT0udcQAAAA/user </li>
-<li> Otra página web muy completa en cuanto a funcionalidades es:
+<li> Otro sitio web muy completo en cuanto a funcionalidades es:
 https://www.amazon.com/-/es/ref=nav_logo </li>
 
 <br/>
