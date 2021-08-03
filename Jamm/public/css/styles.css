@@ -236,7 +236,7 @@ article div.main-article{
 }
 
 .control {
-    width: 90%;
+    width: 100%;
     padding: 8px;
 }
 
@@ -261,9 +261,8 @@ article div.main-article{
     justify-content: center;
     margin: auto;
 
-
-    width: 60vh;
-    box-shadow: teal 100px;
+    width: 50vw;
+    box-shadow: 6px 5px #99154E;
     border: #99154E 3px solid;
     border-radius: 15px;
     background-color: violet;
