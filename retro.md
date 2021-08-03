@@ -8,13 +8,12 @@ Temas a resaltar:
 4. Hacer menos.
 5. Dejar de hacer.
 
-1. Creemos que sería importante empezar a implementar una reunión semanal aunque sea corta, ya que es importante para poder llevar control del trabajo hecho en el equipo y estar al tanto de qué hace falta.
+<ul> Creemos que sería importante empezar a implementar una reunión semanal aunque sea corta, ya que es importante para poder llevar control del trabajo hecho en el equipo y estar al tanto de qué hace falta. </ul>
 
-2. Buscar algún tiempo libre entre las obligaciones que tenemos a diario para poder avanzar más con el proyecto.
+<ul> Buscar algún tiempo libre entre las obligaciones que tenemos a diario para poder avanzar más con el proyecto. </ul>
 
-3. Somos un grupo con buena comunicación y predisposición, lo cual no caben dudas que es el camino que hay que seguir tomando. Sobretodo en tiempos de virtualidad, el tener un equipo que se comunique es imprescindible
+<ul> Somos un grupo con buena comunicación y predisposición, lo cual no caben dudas que es el camino que hay que seguir tomando. Sobretodo en tiempos de virtualidad, el tener un equipo que se comunique es imprescindible. </ul>
 
-4. Estresarnos menos por ver que son muchos puntos a cumplir y confiar en el equipo y que de a poco, el elefante se come.
+<ul> Estresarnos menos por ver que son muchos puntos a cumplir y confiar en el equipo y que de a poco, el elefante se come. </ul>
 
-5. Trabajar al mismo tiempo sobre los mismos archivos para evitar que el código se nos mezcle y genere confusión.
-
+<ul>Trabajar al mismo tiempo sobre los mismos archivos para evitar que el código se nos mezcle y genere confusión. </ul>
