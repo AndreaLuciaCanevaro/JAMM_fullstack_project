@@ -17,31 +17,37 @@ p{
     font-size: 12px;
 }
 div.top-header{
-    padding: 5%;
+    text-align: center;
+    margin-top: 5px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    overflow: auto;
 }
+.top-header div a {
+float: left; 
+ text-align: center; 
+ width: 15%;
+ padding: 12px 0;
+}
+
+.contenido-header {
+    display: inline-flex;
+    align-items: center;
+}
+
+
 
 header{
     background-color: #EAC926;
 }
 
-header div.logo{
-    width: 50%;
-}
+/* Ver tamaño de logo */
 
-header div.logo{
-    padding: 10px;
-}
 header nav{
     font-size: 12px;
-}
-
-header ul li{
-    list-style-type: none;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: #000;
 }
 
 header .form .input{
@@ -59,43 +65,11 @@ header .form .submit{
     width: 10%;
 }
 
-header div.top-header p{
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-}
-
-div.burger-menu{
-    text-align: center;
-}
-
-div.burger-menu i{
-    background-color: #0044AA;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 20px;
-    height: 40px;
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
-    width: 40px;
-}
 
 .products {
     width: 100%;
 }
 
-.price{
-    font-size: 18px;
-    width: 30%;
-    display: flex;
-}
-
-.discount {
-    font-size: 16px;
-    font-weight: normal;
-    width: 70%;
-    display: flex;
-}
 
 .description{
     font-size: 16px;
@@ -126,25 +100,6 @@ main section article{
 
 main section article img{
     width: 100%;
-}
-
-main section article i,
-.discount{
-    color: #39b54a;
-}
-
-main section article i{
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position:absolute;
-    right: 20px;
-    top: -15px;
-    display: block;
 }
 
 main section h3{
@@ -217,6 +172,7 @@ article div.main-article{
     margin: auto;
     padding: 30px;
     max-width: 150px;
+    box-sizing: border-box;
 }
 
 .create-form {
@@ -272,3 +228,23 @@ article div.main-article{
 }
 
 /* Acá termina el codigo del login */
+
+
+footer {
+    display: flex;
+    align-items: center;
+    background: yellow;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer div:hover{
+    color: red;
+}
+
+
+
+.categoria {
+    background-color: #ecb016;
+    padding: 7px;
+}
