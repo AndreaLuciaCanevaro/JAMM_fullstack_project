@@ -1,136 +1,57 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Registro de usuario</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/regiterstyles.css">
-        //ver font style
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    </head>
-    <body>
-        <header>
-            <div class="top-header">
-                <div class="logo"> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/305580695d.js" crossorigin="anonymous"></script>
 
-                    //cambiar logo: JAMM
+</head>
+<body>
 
-                    <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-                </div>
-                <div class="form" action="#" method="GET">
-                    <div class="input">Buscar productos, marcas y más</div>
-                    <div class="submit"><i class="fa fa-search"></i></div>
-                </div>
-                <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Tiendas Oficiales</a></li>
-                    <li><a href="#">Vender</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-                    <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-                    <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
-                </ul>
-            </nav>
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
-        </header>
-        <section class="banner">
-            <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
-        </section>
-        <main>
-            <section class="last-visit">
-                <h3>Basado en tu última visita</h3>
-                <div class="products">
-                    <article>
-                        <img src="images/img-cafetera-moulinex.jpg" alt="Cafetera" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price">$6.770</p>
-                            <p class="discount">40% off</p>
-                            <h4 class="description">Cafetera Moulinex</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="images/img-macbook-pro-2019.jpg" alt="MacBook" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price">$230.000</p>
-                            <p class="discount">20% off</p>
-                            <h4 class="description">MacBook Pro 2019</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="images/img-samsung-galaxy-s10.jpg" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price">$70.500</p>
-                            <p class="discount">10% off</p>
-                            <h4 class="description">Samsung Galaxy S10</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price">$23.200</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">SmartTv Samsung 43"</h4>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="offers">
-                <h3>Ofertas</h3>
-                <div class="products">
-                    <article>
-                        <img src="images/img-cafetera-moulinex.jpg" alt="Cafetera" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price">$6.770</p>
-                            <p class="discount">40% off</p>
-                            <h4 class="description">Cafetera Moulinex</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="images/img-macbook-pro-2019.jpg" alt="MacBook" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price">$230.000</p>
-                            <p class="discount">20% off</p>
-                            <h4 class="description">MacBook Pro 2019</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="images/img-samsung-galaxy-s10.jpg" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price">$70.500</p>
-                            <p class="discount">10% off</p>
-                        <h4 class="description">Samsung Galaxy S10</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-truck"></i>
-                            <p class="price">$23.200</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">SmartTv Samsung 43"</h4>
-                        </div>
-                    </article>
-                </div>  
-            </section>
-        </main>
-        <footer>
-            
-        </footer>
+    <header class="header-login">
+        <div>
+            <a href="/"> <img src="/images/JAMM-Gaming.png" class="logo-login"></a>
+           
+        </div>
+          
+    </header>
+<br>
+    <div class="contenedor-login">
+    <form action="/" method="GET" class="create-form">
+        <div class="control-formulario">
+            <label>¡Contanos quién sos!</label>
+        </div>
+        <div class="control-formulario">
+            <label>Nombre y apellido:</label>
+            <input type="text" name="nombreapellido" placeholder="Juan Pérez" class="control">
+        </div> 
+        <div class="control-formulario">
+            <label>Email:</label>
+            <input type="email" name="mail" placeholder="juan@hotmail.com" class="control">
+        </div> 
+        <div class="control-formulario">
+            <label>Contraseña:</label>
+            <input type="password" name="contraseña" placeholder="Contraseña" class="control">
+        </div>   
+        <div class="control-formulario">
+            <label>Confirmar contraseña:</label>
+            <input type="password" name="contraseña" placeholder="Contraseña" class="control">
+        </div>   
+
+        <div class="control-formulario">  
+
+        <button type="submit" class="boton-formulario">Registrarme</button>
         
-    </body>
+        </div>
+    </form>
+    </div>
+
+    </section>
+</body>
 </html>
