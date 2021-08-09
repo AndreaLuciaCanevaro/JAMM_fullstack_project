@@ -31,4 +31,4 @@ https://www.amazon.com/-/es/ref=nav_logo </li>
 
 <br/>
 <p>Tablero de trabajo Trello</p>
-https://trello.com/invite/b/DKZJQHdR/0cc5d692b9574251c97e72c32ade2332/jamm
+https://trello.com/b/DKZJQHdR/jamm
