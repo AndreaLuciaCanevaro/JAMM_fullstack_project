@@ -31,8 +31,6 @@ div.top-header{
     align-items: center;
 }
 
-
-
 header{
     background-color: #EAC926;
 }
@@ -106,6 +104,13 @@ article div.main-article{
     flex-wrap: wrap;
 }
 
+/* producDetail.html */
+
+.Producto img {
+    width: 100%;
+}
+
+
 @media (min-width: 361px){
 
     main section article{
@@ -127,10 +132,6 @@ article div.main-article{
     .objeto:hover .description{
             display: block;
     }
-
-
-
-
 
     .products{
         display:flex;   

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Producto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="top-header">
+                <a href="/"><img class="logo-login" src="images/JAMM-Gaming.png" alt="Logo JAMM"> </a>
+                <input type="text" class="buscador" placeholder="Buscar">
+                <button type="button"><a href="#"><i class="fa fa-search"></i></a> </button>
+                <a href="mailto:JAMM@JAMM.com"><i class="fa fa-fw fa-envelope"></i></a> 
+                <a href="/productCart"><i class="fas fa-heart"></i></a>
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a> 
+                <a href="/login"><i class="fa fa-fw fa-user"></i></a>
+            </div>
+            <nav>
+                <div class="categoria">
+                    <form action="" method="GET">
+                    <label>Categoría</label>
+                        <select name="categorías" id="">
+                            <option value="Todas">Todas</option>
+                            <option value="Video">Gaming</option>
+                            <option value="Audio">Accesorios</option>
+                            <option value="Dispositivos">Dispositivos</option>
+                        </select>
+                    </form>    
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="Producto">
+                <img src="images/Play.jpg" alt="Play" class="product_img">
+                <div class="ProductoPlay">
+                    <a href="/productCart"><i class="far fa-heart"></i></a>
+                    <h3>Play Station 5</h3>
+                    <h4>$ XXXX</h4>
+                    <p>En 12x de $XXX</p>
+                    <h5>Descripción de producto:</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Illum odio magnam facilis ratione exercitationem suscipit.</p>
+                    <h6>Medio de pago:</h6>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+                <div class="boton-comprar">
+                    <form action="/productCart" method="GET">
+                    <button type="submit">Comprar ahora</button>
+                    </form>
+                </div>
+                <div class="boton-carrito">
+                    <form action="/productCart" method="GET">
+                    <button type="submit">Agregar al carrito</button>
+                    </form>
+                </div>
+                <h3 class="productos-similares">Productos similares</h3>
+                <section class="productos-similaresX">
+                    <article>
+                        <img src="images/Joystick.jpg" alt="Joystick" class="product_img">
+                        <div class="descripProductSim">
+                        <h5>Mando PS5</h5>
+                        <p>$XXXX</p>
+                        </div>                                       
+                    </article>
+                    <article>
+                        <img src="images/JuegoSpiderMan.jpg" alt="JuegoSpiderMan" class="product_img">
+                        <div class="descripProductSim">
+                        <h5>SpiderMan Miles Morales</h5>
+                        <p>$XXXX</p>
+                        </div>                                       
+                    </article>
+                    <article>
+                        <img src="images/Auris.jpg" alt="Auris" class="product_img">
+                        <div class="descripProductSim">
+                        <h5>Auriculares</h5>
+                        <p>$XXXX</p>
+                        </div>                                       
+                    </article>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="primero">
+                <i class="fas fa-map-marker-alt"></i>
+                <h5>Locales</h5>
+                <p>Av Cabildo 1460</p>
+            </div>
+            <div class="segundo">
+                <i class="fas fa-credit-card"></i>
+                <h5>Formas de pago</h5>
+                <p>Tarjeta - Efectivo - Transferencia</p>
+            </div>
+            <div class="tercero">
+                <i class="fas fa-id-badge"></i>
+                <h5>¿Quiénes somos?</h5>
+            </div>
+            <div class="cuarto">
+                <i class="fas fa-question-circle"></i>
+                <h5>Ayuda</h5>
+            </div>
+            <div class="quinto">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </footer>
+    </body>
+</html>
