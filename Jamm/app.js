@@ -30,3 +30,7 @@ app.get('/productCart', (req,res)=>{
 app.get('/productDetail', (req,res)=>{
     res.sendFile(__dirname + '/views/productDetail.html');
 });
+
+app.get('/emptyproductCart', (req,res)=>{
+    res.sendFile(__dirname + '/views/emptyproductCart.html');
+});
