@@ -321,3 +321,11 @@ th:last-child{
     text-align: right;
 }
 /* fin de productCart*/
+
+.noProduct {
+
+    color: grey;
+    font-size: large;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
