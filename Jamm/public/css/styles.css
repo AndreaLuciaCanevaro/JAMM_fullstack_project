@@ -71,7 +71,7 @@ header .form .submit{
 
 h3,
 .description{
-    color: #666;
+    color: rgb(255, 255, 255);
 }
 
 section.banner img{
@@ -328,4 +328,19 @@ th:last-child{
     font-size: large;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+
+.objeto {
+    background-color: #d83a7e;
+}
+
+i {
+
+    color: #91164b;
+}
+
+.categorias {
+
+    color: #91164b;
 }
