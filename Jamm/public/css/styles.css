@@ -217,7 +217,7 @@ article div.main-article{
 }
 
 .buscador {
-    max-width: 20%;
+    max-width: 70%;
 
 }
 
@@ -383,4 +383,8 @@ i {
 .categorias {
 
     color: #91164b;
+}
+
+.negro {
+    color: black;
 }
