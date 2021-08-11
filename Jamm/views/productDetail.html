@@ -34,56 +34,64 @@
             </nav>
         </header>
         <main>
-            <div class="Producto">
-                <img src="images/Play.jpg" alt="Play" class="product_img">
-                <div class="ProductoPlay">
-                    <a href="/productCart"><i class="far fa-heart"></i></a>
-                    <h3>Play Station 5</h3>
-                    <h4>$ XXXX</h4>
-                    <p>En 12x de $XXX</p>
-                    <h5>Descripción de producto:</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Illum odio magnam facilis ratione exercitationem suscipit.</p>
-                    <h6>Medio de pago:</h6>
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/Play.jpg" alt="Play" class="product_img" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="iconoFavoritos">
+                        <a href="/productCart"><i class="far fa-heart"></i></a>
+                        </div>
+                        <h3>Play Station 5</h3>
+                        <h4>$ XXXX</h4>
+                        <p>En 12x de $XXX</p>
+                        <h5>Descripción de producto:</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Illum odio magnam facilis ratione exercitationem suscipit.</p>
+                        <h5>Medio de pago:</h5>
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <div class="boton-comprar">
+                            <form action="/productCart" method="GET">
+                            <button type="submit" class="boton-formulario">Comprar ahora</button>
+                            </form>
+                        </div>
+                        <div class="boton-carrito">
+                            <form action="/productCart" method="GET">
+                            <button type="submit" class="boton-formulario">Agregar al carrito</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="boton-comprar">
-                    <form action="/productCart" method="GET">
-                    <button type="submit">Comprar ahora</button>
-                    </form>
-                </div>
-                <div class="boton-carrito">
-                    <form action="/productCart" method="GET">
-                    <button type="submit">Agregar al carrito</button>
-                    </form>
-                </div>
-                <h3 class="productos-similares">Productos similares</h3>
-                <section class="productos-similaresX">
-                    <article>
-                        <img src="images/Joystick.jpg" alt="Joystick" class="product_img">
-                        <div class="descripProductSim">
-                        <h5>Mando PS5</h5>
-                        <p>$XXXX</p>
-                        </div>                                       
-                    </article>
-                    <article>
-                        <img src="images/JuegoSpiderMan.jpg" alt="JuegoSpiderMan" class="product_img">
-                        <div class="descripProductSim">
-                        <h5>SpiderMan Miles Morales</h5>
-                        <p>$XXXX</p>
-                        </div>                                       
-                    </article>
-                    <article>
-                        <img src="images/Auris.jpg" alt="Auris" class="product_img">
-                        <div class="descripProductSim">
-                        <h5>Auriculares</h5>
-                        <p>$XXXX</p>
-                        </div>                                       
-                    </article>
-                </section>
             </div>
+            <section class="productos-similares">
+            <h3>Productos similares</h3>
+                <div class="row-2">
+                    <article>
+                        <img src="images/Joystick.jpg" alt="Joystick" class="product_img" width="100%">
+                        <div class="descripProductSim">
+                            <h5>Mando PS5</h5>
+                            <p>$XXXX</p>
+                        </div>                                       
+                    </article>
+                    <article>
+                        <img src="images/JuegoSpiderMan.jpg" alt="JuegoSpiderMan" class="product_img" width="100%">
+                        <div class="descripProductSim">
+                            <h5>SpiderMan Miles Morales</h5>
+                            <p>$XXXX</p>
+                        </div>                                       
+                    </article>
+                    <article>
+                        <img src="images/Auris.jpg" alt="Auris" class="product_img" width="100%">
+                        <div class="descripProductSim">
+                            <h5>Auriculares</h5>
+                            <p>$XXXX</p>
+                        </div>                                 
+                    </article>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="primero">

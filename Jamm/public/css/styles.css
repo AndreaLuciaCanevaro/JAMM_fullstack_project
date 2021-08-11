@@ -104,11 +104,51 @@ article div.main-article{
     flex-wrap: wrap;
 }
 
+
 /* producDetail.html */
 
-.Producto img {
-    width: 100%;
+.row {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 30px;
 }
+
+.row img{
+    width: 80%;
+    height: 80%;
+}
+
+.iconoFavoritos {
+    text-align: right;
+    font-size: 20px;
+}
+
+.productos-similares h3 {
+    text-align: center;
+}
+
+.row-2 {
+    display: flex;
+    text-align: center;
+}
+
+.row-2 article {
+    align-items: stretch;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boton-comprar, .boton-carrito {
+    text-align: center;
+}
+/* colores del boton se respeta etiqueta de .boton-formulario, cambiar despues */
+
+
+/* termima product detail */
+
 
 
 @media (min-width: 361px){
