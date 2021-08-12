@@ -107,22 +107,22 @@ article div.main-article{
 
 /* producDetail.html */
 
-.row {
-    display: flex;
-    padding: 5px;
-    align-items: center;
-    justify-content: space-around;
-    line-height: 30px;
-}
-
 .row img{
     width: 80%;
     height: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .iconoFavoritos {
     text-align: right;
     font-size: 20px;
+}
+
+.textoProducto {
+    line-height: 1.6;
 }
 
 .productos-similares h3 {
@@ -144,8 +144,17 @@ article div.main-article{
 .boton-comprar, .boton-carrito {
     text-align: center;
 }
-/* colores del boton se respeta etiqueta de .boton-formulario, cambiar despues */
 
+.boton-formulario2 {
+    background-color: #99154E;
+    border: none;
+    font-size: 15px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 /* termima product detail */
 
@@ -179,6 +188,14 @@ article div.main-article{
 
     .products{
         display:flex;   
+    }
+
+    .row {
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        justify-content: space-around;
+        line-height: 30px;
     }
 
 }
