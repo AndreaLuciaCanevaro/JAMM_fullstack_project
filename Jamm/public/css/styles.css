@@ -406,3 +406,9 @@ i {
 .negro {
     color: black;
 }
+
+.sinEstilo {
+
+    color: black;
+    text-decoration: none;
+}
