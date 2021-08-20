@@ -8,29 +8,29 @@ app.listen(3010, ()=>{
 });
 
 app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/index.html');
+    res.render(__dirname + 'index');
 });
 
 app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
+    res.sendFile(__dirname + '/views/register.ejs');
 });
 
 app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
+    res.sendFile(__dirname + '/views/login.ejs');
 });
 
 app.post('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
+    res.sendFile(__dirname + '/views/login.ejs');
 });
 
 app.get('/productCart', (req,res)=>{
-    res.sendFile(__dirname + '/views/productCart.html');
+    res.sendFile(__dirname + '/views/productCart.ejs');
 });
 
 app.get('/productDetail', (req,res)=>{
-    res.sendFile(__dirname + '/views/productDetail.html');
+    res.sendFile(__dirname + '/views/productDetail.ejs');
 });
 
 app.get('/emptyproductCart', (req,res)=>{
-    res.sendFile(__dirname + '/views/emptyproductCart.html');
+    res.sendFile(__dirname + '/views/emptyproductCart.ejs');
 });
