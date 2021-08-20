@@ -1,4 +1,4 @@
-<h1>RETROSPECTIVA<h1>
+<h1>RETROSPECTIVA para encarar sprint 2<h1>
 <h3>Dinámica de la estrella de mar</h3>
 Temas a resaltar:
 
@@ -17,3 +17,24 @@ Temas a resaltar:
 <ul> Estresarnos menos por ver que son muchos puntos a cumplir y confiar en el equipo y que de a poco, el elefante se come. </ul>
 
 <ul>Trabajar al mismo tiempo sobre los mismos archivos para evitar que el código se nos mezcle y genere confusión. </ul>
+
+
+<h1>RETROSPECTIVA para encarar sprint 3<h1>
+<h3>Dinámica de la estrella de mar</h3>
+Temas a resaltar:
+
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+<ul> Creemos que sería muy importante comenzar a trabajar con ramas en github para perder el temor a pisar el trabajo del resto de los integrantes del grupo. </ul>
+
+<ul> Poder organizarnos mejor para lograr dedicarle tiempo más constante al sprint y no colapsar faltando poco tiempo teniendo que hacer muchas cosas juntas. </ul>
+
+<ul> Nos tomamos este proyecto con mucha responsabilidad, más allá de que tenemos responsabilidades por fuera del curso, todos los integrantes valoramos la imporancia de aprender y mejorar. Nuestra meta no es simplemente terminar el trabajo, sino que también queremos que sea de calidad. </ul>
+
+<ul> Poder divirnos mejor las tareas. Y fijar qué es responsabilidad de cada uno para que cada parte del proyecto tenga el 100% de dedicación. </ul>
+
+<ul>Empezar a jugarsela más aunque tengamos temor de arruinar el trabajo. A veces vamos con resoluciones más convencionales por no sentirnos aptos de hacer algo más complicado. </ul>
