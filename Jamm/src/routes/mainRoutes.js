@@ -1,12 +1,12 @@
-const express = require ("express");
+const express = require("express");
 const router = express.Router();
-const mainController= require("./controllers/mainController"); 
-router.get ("/", mainController.emptyproductCart);
-router.get ("/", mainController.index);
-router.get ("/", mainController.login);
-router.get ("/", mainController.productCart);
-router.get ("/", mainController.productDetail);
-router.get ("/", mainController.register);
+const mainController= require("../controllers/mainController"); 
+router.get("/emptyproductCart", mainController.emptyproductCart);
+router.get("/", mainController.index);
+router.get("/login", mainController.login);
+router.get("/productCart", mainController.productCart);
+router.get("/productDetail", mainController.productDetail);
+router.get("/register", mainController.register);
 
 
 // esto va??
@@ -19,4 +19,4 @@ router.get ("/", mainController.register);
 //});
 
 
-module.exports=router;
+module.exports = router;
