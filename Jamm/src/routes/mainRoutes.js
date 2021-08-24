@@ -7,6 +7,10 @@ router.get("/login", mainController.login);
 router.get("/productCart", mainController.productCart);
 router.get("/productDetail", mainController.productDetail);
 router.get("/register", mainController.register);
+router.get("/crearProducto", mainController.crearProducto);
+router.get("/editarProducto", mainController.editarProducto);
+
+
 
 
 // esto va??

@@ -16,6 +16,12 @@ const controller = {
     },
     register:(req,res) => {
         res.render("register")
+    },
+    crearProducto:(req,res) => {
+        res.render("crearProducto")
+    },
+    editarProducto:(req,res) => {
+        res.render("editarProducto")
     }
 };
 

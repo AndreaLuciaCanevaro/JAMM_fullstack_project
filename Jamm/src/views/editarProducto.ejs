@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head" , {title:"Editar producto"}) %>
+
+<body>
+
+    <header class="header-login">
+        <div>
+            <a href="/"> <img src="/images/JAMM-Gaming.png" class="logo-login"></a>
+           
+        </div>
+          
+    </header>
+<br>
+    <div class="contenedor-login">
+    <form action="/" method="GET" class="create-form">
+        <div class="control-formulario">
+            <label>Editar producto</label>
+        </div>
+        <div class="control-formulario">
+            <label>Nombre del producto:</label>
+            <input type="text" name="nombreproducto" placeholder="Mouse XR3000" class="control">
+        </div> 
+        <div class="control-formulario">
+            <label>Descripción:</label>
+            <textarea type="text" name="descripcion" placeholder="Describe el producto" class="control"> </textarea>
+        </div> 
+        <div class="control-formulario">
+            <input type="file" name="fotoProducto" accept=".jpg, .png" multiple>
+        </div>
+        <div class="control-formulario">
+            <label>Categoría:</label>
+            <select name="categoria" class="control">
+            <option value="Ninguna" selected disabled>Elegir categoría</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Accesorios">Accesorios</option>
+            <option value="Dispositivos">Dispositivos</option>
+        </select>
+        </div>   
+        <div class="control-formulario">
+            <label>Color:</label>
+            <select name="color" class="control">
+            <option value="Niguno" selected disabled>Seleccionar color</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Negro">Negro</option>
+            <option value="Rojo">Rojo</option>
+            <option value="Azul">Azul</option>
+            <option value="Otro">Otro</option>
+        </select>
+        </div>   
+        <div class="control-formulario">
+            <label>Precio $AR:</label>
+            <input type="number" name="precio" placeholder="200,50" class="control">
+        </div>   
+        
+        <div class="control-formulario">  
+
+        <button type="submit" class="boton-formulario">Confirmar edición</button>
+        
+        </div>
+
+        <div class="control-formulario">  
+
+            <button type="reset" class="boton-formulario">Cancelar</button>
+            
+            </div>
+    </form>
+    </div>
+
+    </section>
+</body>
+</html>
