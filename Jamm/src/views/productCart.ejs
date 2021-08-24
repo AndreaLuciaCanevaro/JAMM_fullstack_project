@@ -9,30 +9,8 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <header>
-            <div class="top-header">
-                <a href="/"><img class="logo-login" src="images/JAMM-Gaming.png" alt="Logo JAMM"> </a>
-                <div> <input type="text" class="buscador" placeholder="Buscar">
-                    <button type="button"><a href="#"><i class="fa fa-search"></i></a> </button></div>
-                <a href="mailto:JAMM@JAMM.com"><i class="fa fa-fw fa-envelope"></i></a> 
-                <a href="/productCart"><i class="fas fa-heart"></i></a>
-                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a> 
-                <a href="/login"><i class="fa fa-fw fa-user"></i></a>
-            </div>
-            <nav>
-                <div class="categoria">
-                    <form action="" method="GET">
-                    <label>Categoría</label>
-                        <select name="categorías" id="">
-                            <option value="Todas">Todas</option>
-                            <option value="Video">Gaming</option>
-                            <option value="Audio">Accesorios</option>
-                            <option value="Dispositivos">Dispositivos</option>
-                        </select>
-                    </form>    
-                </div>
-            </nav>
-        </header>
+        <%- include("./partials/header") %>
+
         <main>
             <div class="small-container cart-page">
                 <table>
@@ -106,32 +84,7 @@
                     </table>
                 </div>
         </main>
-        <footer>
-            <div class="primero">
-               <a href="https://www.google.com.ar/maps" class="sinEstilo"> <i class="fas fa-map-marker-alt"></i>
-                <h5>Locales</h5>
-                <p>Av Cabildo 1460</p> </a>
-            </div>
-            <div class="segundo">
-                <i class="fas fa-credit-card"></i>
-                <h5>Formas de pago</h5>
-                <p>Tarjeta - Efectivo - Transferencia</p>
-            </div>
-            <div class="tercero">
-                <i class="fas fa-id-badge"></i>
-                <h5>¿Quiénes somos?</h5>            
-            </div>
-            <div class="cuarto">
-                <i class="fas fa-question-circle"></i>
-                <h5>Ayuda</h5>
-            </div>
-            <div class="quinto">
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                <h5>Nuestras redes</h5>          
-            </div>
-        </footer>        
+        <%- include("./partials/header") %>
+  
     </body>
 </html>
