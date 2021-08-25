@@ -6,22 +6,22 @@ const controller = {
         res.render("index")
     },
     login:(req,res) => {
-        res.render("login")
+        res.render("users/login")
     },
     productCart:(req,res) => {
         res.render("productCart")
     },
     productDetail:(req,res) => {
-        res.render("productDetail")
+        res.render("products/productDetail")
     },
     register:(req,res) => {
-        res.render("register")
+        res.render("users/register")
     },
     crearProducto:(req,res) => {
-        res.render("crearProducto")
+        res.render("products/crearProducto")
     },
     editarProducto:(req,res) => {
-        res.render("editarProducto")
+        res.render("products/editarProducto")
     }
 };
 

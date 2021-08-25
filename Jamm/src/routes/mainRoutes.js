@@ -13,14 +13,6 @@ router.get("/editarProducto", mainController.editarProducto);
 
 
 
-// esto va??
-//router.get ("/register", (req, res) =>{
-//    res.send ("Registro");
-//});
-//router.get ("/productos/:id", (req, res) => {
-//    const idProducto = req.params.id;
-//    res.send ("Listado de productos");
-//});
 
 
 module.exports = router;
