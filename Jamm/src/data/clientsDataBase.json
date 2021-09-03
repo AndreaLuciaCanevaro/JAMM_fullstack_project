@@ -1,0 +1,174 @@
+[
+    {
+        "id": "593732624-5",
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": " ",
+        "price": 4998.49,
+        "image": " ",
+        "category": "Agender",
+        "keywords": [
+            "India",
+            "Juliett",
+            "Mike"
+        ],
+        "color": "Pink"
+    },
+    {
+        "id": "135406862-9",
+        "name": "Nike Air Max Pre-Day",
+        "description": " ",
+        "price": 4697.3,
+        "image": " ",
+        "category": "Male",
+        "keywords": [
+            "Tango",
+            "India",
+            "Foxtrot",
+            "Zulu"
+        ],
+        "color": "Maroon"
+    },
+    {
+        "id": "615810455-8",
+        "name": "Nike Canyon",
+        "description": " ",
+        "price": 2724.0,
+        "image": " ",
+        "category": "Agender",
+        "keywords": [
+            "Sierra",
+            "Alfa",
+            "Lima"
+        ],
+        "color": "Aquamarine"
+    },
+    {
+        "id": "283929696-9",
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": "mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis",
+        "price": 3186.53,
+        "image": " ",
+        "category": "Agender",
+        "keywords": [
+            "Echo",
+            "Oscar"
+        ],
+        "color": "Puce"
+    },
+    {
+        "id": "593649428-4",
+        "name": "Nike Canyon",
+        "description": " ",
+        "price": 1893.53,
+        "image": " ",
+        "category": "Female",
+        "keywords": [
+            "Foxtrot",
+            "Charlie",
+            "Lima",
+            "Uniform",
+            "Papa"
+        ],
+        "color": "Maroon"
+    },
+    {
+        "id": "956644330-7",
+        "name": "Nike Air Max Pre-Day",
+        "description": " ",
+        "price": 1715.08,
+        "image": " ",
+        "category": "Genderqueer",
+        "keywords": [
+            "Zulu",
+            "X-ray"
+        ],
+        "color": "Fuscia"
+    },
+    {
+        "id": "135255505-0",
+        "name": "Nike Phantom GT Elite Dynamic",
+        "description": " ",
+        "price": 4658.25,
+        "image": " ",
+        "category": "Polygender",
+        "keywords": [
+            "Whiskey",
+            "Tango",
+            "Delta",
+            "Lima",
+            "Victor"
+        ],
+        "color": "Fuscia"
+    },
+    {
+        "id": "699606763-4",
+        "name": "Nike Air Max Pre-Day",
+        "description": " ",
+        "price": 4402.75,
+        "image": " ",
+        "category": "Male",
+        "keywords": [
+            "Golf",
+            "Papa",
+            "Alfa",
+            "Juliett"
+        ],
+        "color": "Crimson"
+    },
+    {
+        "id": "795779994-9",
+        "name": "Nike Canyon",
+        "description": " ",
+        "price": 4509.65,
+        "image": " ",
+        "category": "Genderfluid",
+        "keywords": [
+            "Mike",
+            "Charlie",
+            "Charlie"
+        ],
+        "color": "Crimson"
+    },
+    {
+        "id": "021451060-3",
+        "name": "LeBron 18 Low Summer",
+        "description": " ",
+        "price": 2825.15,
+        "image": " ",
+        "category": "Bigender",
+        "keywords": [
+            "Sierra",
+            "Victor",
+            "Sierra"
+        ],
+        "color": "Puce"
+    },
+    {
+        "id": "692940450-0",
+        "name": "Nike Air Max Pre-Day",
+        "description": " ",
+        "price": 3826.6,
+        "image": " ",
+        "category": "Genderqueer",
+        "keywords": [
+            "Echo",
+            "Zulu",
+            "India",
+            "Zulu"
+        ],
+        "color": "Purple"
+    },
+    {
+        "id": "175177137-7",
+        "name": "Nike Canyon",
+        "description": " ",
+        "price": 2039.66,
+        "image": " ",
+        "category": "Male",
+        "keywords": [
+            "Lima",
+            "Charlie"
+        ],
+        "color": "Violet"
+    }
+]
