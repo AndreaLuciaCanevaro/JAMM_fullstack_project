@@ -10,6 +10,10 @@ router.get("/register", mainController.register);
 router.get("/crearProducto", mainController.crearProducto);
 router.get("/editarProducto", mainController.editarProducto);
 
+//agrego esta ruta
+router.get('/search', mainController.search); 
+
+
 
 
 
