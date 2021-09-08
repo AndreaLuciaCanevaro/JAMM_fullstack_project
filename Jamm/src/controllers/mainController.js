@@ -1,27 +1,22 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 const controller = {
-    emptyproductCart:(req,res) => {
-        res.render("emptyproductCart")
-    },
     index:(req,res) => {
-        res.render("index")
+        let gaming = products.filter (i => i.category == "Gaming");
+        let accesorios = products.filter (i => i.category == "Accesorios");
+        let dispositivos = products.filter (i => i.category == "Dispositivos");
+        res.render("index", { productosGaming : gaming , productosAccesorios : accesorios , productosDispositivos : dispositivos});
     },
     login:(req,res) => {
         res.render("users/login")
     },
-    productCart:(req,res) => {
-        res.render("productCart")
-    },
-    productDetail:(req,res) => {
-        res.render("products/productDetail")
-    },
     register:(req,res) => {
         res.render("users/register")
-    },
-    crearProducto:(req,res) => {
-        res.render("products/crearProducto")
-    },
-    editarProducto:(req,res) => {
-        res.render("products/editarProducto")
     }
 };
 
