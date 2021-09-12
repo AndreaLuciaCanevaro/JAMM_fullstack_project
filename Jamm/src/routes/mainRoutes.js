@@ -6,10 +6,7 @@ router.get("/", mainController.index);
 router.get("/login", mainController.login);
 router.get("/register", mainController.register);
 
-
 //agrego esta ruta
-//router.get('/search', mainController.search); 
-
-
+router.get('/search', mainController.search); 
 
 module.exports = router;
