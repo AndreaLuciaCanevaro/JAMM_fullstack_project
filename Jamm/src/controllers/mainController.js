@@ -29,6 +29,12 @@ const controller = {
             }
             res.render("usersResults", {usersResults:usersResults})
         }
+    },
+    edit: function (req,res){
+        let idUser = req.params.idUser;
+        let users = clientsDataBase;
+        let userToEdit = users [idUser];
+        res.render ('userEdit', {userToEdit:userToEdit});
     }
 };
 
