@@ -27,9 +27,7 @@ const controller = {
     crearProducto:(req,res) => {
         res.render("products/crearProducto");
     },
-    editarProducto:(req,res) => {
-        res.render("products/editarProducto");
-    },
+    
 	store: (req, res) => {
 		if (req.file) {
 			let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -53,8 +51,10 @@ const controller = {
 	},
 
     
-
 // Update - Form to edit
+//editarProducto:(req,res) => {
+//    res.render("products/editarProducto");
+//},
 edit: (req, res) => {
     let idProduct = parseInt(req.params.id);
     let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
