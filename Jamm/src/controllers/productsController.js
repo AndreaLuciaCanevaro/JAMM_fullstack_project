@@ -52,9 +52,9 @@ const controller = {
 
     
 // Update - Form to edit
-//editarProducto:(req,res) => {
-//    res.render("products/editarProducto");
-//},
+editarProducto:(req,res) => {
+    res.render("products/editarProducto");
+},
 edit: (req, res) => {
     let idProduct = parseInt(req.params.id);
     let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
