@@ -28,26 +28,22 @@ router.get("/products", productsController.allProducts);
 
 /*** GET ONE PRODUCT ***/ 
 router.get("/productDetail/:id", productsController.productDetail);
-
-router.get("/crearProducto", productsController.crearProducto);
-router.get("/editarProducto", productsController.editarProducto);
 router.get("/productCart", productsController.productCart);
 router.get("/emptyproductCart", productsController.emptyproductCart);
 
 
 /*** CREATE ONE PRODUCT ***/ 
-//router.get('/create/', productsController.create); 
+router.get("/crearProducto", productsController.crearProducto);
 router.post('/productCart', productsController.store); 
-// router.post('/crearProducto',  upload.single('fotoProducto'), productsController.store); 
-
-router.post('/', upload.single('fotoProducto'), productsController.store); 
+router.post('/products', upload.single('fotoProducto'), productsController.store); 
 
 
 /*** EDIT ONE PRODUCT ***/ 
+router.get("/editarProducto", productsController.editarProducto);
 //router.get('/:id/edit', productsController.edit); 
-//router.put('/:id', productsController.update); 
+router.put('/:id', productsController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
-//router.delete('/:id', productsController.destroy);
+router.delete('/:id', productsController.destroy);
 
 module.exports = router;

@@ -9,12 +9,14 @@ const dotToComma = n => n.toString().replace(/\./, ",");
 
 const controller = {
     allProducts: (req,res) => {
-        res.render("products/productos", { productos : products });  
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render("products/products", { products : products, toThousand: toThousand });  
     },
     productDetail:(req,res) => {
         let idProduct = parseInt(req.params.id);
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let product = products.filter (i => i.id === idProduct);
-        res.render("products/productDetail", { producto : product });
+        res.render("products/productDetail", { product : product, toThousand: toThousand, dotToComma: dotToComma });
     },
     emptyproductCart:(req,res) => {
         res.render("emptyproductCart");
@@ -43,13 +45,64 @@ const controller = {
 			products.push(newProduct);
 			let productsJSON = JSON.stringify(products);
 			fs.writeFileSync(productsFilePath, productsJSON);
-			res.redirect('/productos'); 
+			res.redirect('/products'); 
 		} else {
 			res.render('crearProducto');
             
 		}
 	},
 
+    
+
+// Update - Form to edit
+edit: (req, res) => {
+    let idProduct = parseInt(req.params.id);
+    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    let productToEdit = products.filter(i => i.id === idProduct);
+    res.render('editarProducto', {productToEdit: productToEdit,
+        toThousand: toThousand}); 
+},
+// Update - Method to update
+update: (req, res) => {
+    let idProduct = parseInt(req.params.id);
+    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    products.forEach(product => {
+        if(product.id === idProduct) {
+            product.name = req.body.name;
+            product.price = req.body.price;
+            product.discount = req.body.discount;
+            product.category = req.body.category;
+            product.description = req.body.description;
+            if (req.file) {
+                let indexProduct = products.findIndex(product => product.id === idProduct);
+                let imagePath = path.join(__dirname, '../../public/images', products[indexProduct].image);
+                fs.unlink(imagePath, function (err) {
+                    if (err) throw err;
+                });
+                product.image = req.file.filename;
+            }
+        }
+    });
+    let productsJSON = JSON.stringify(products, null, ' ');
+    fs.writeFileSync(productsFilePath, productsJSON);
+    res.redirect('/products');
+},
+
+// Delete - Delete one product from DB
+destroy : (req, res) => {
+    let idProduct = parseInt(req.params.id);
+    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    let indexProduct = products.findIndex(product => product.id === idProduct);
+    let imagePath = path.join(__dirname, '../../public/images', products[indexProduct].image);
+    fs.unlink(imagePath, function (err) {
+        if (err) throw err;
+        console.log('File deleted!');
+    });
+    let productsUpdated = products.filter(i => i.id !== idProduct);
+    let productsUpdatedJSON = JSON.stringify(productsUpdated, null, ' ');
+    fs.writeFileSync(productsFilePath, productsUpdatedJSON);
+    res.redirect('/products');
+}
 };
 
 module.exports= controller;
