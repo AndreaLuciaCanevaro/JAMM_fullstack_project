@@ -38,9 +38,8 @@ router.post('/productCart', productsController.store);
 router.post('/products', upload.single('fotoProducto'), productsController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get("/edit", productsController.edit);
-//router.get('/:id/edit', productsController.edit); 
-router.put('/:id', productsController.update); 
+router.get("/edit/:id", productsController.edit);
+router.put('/edit/:id', upload.single('fotoProducto'), productsController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', productsController.destroy);
