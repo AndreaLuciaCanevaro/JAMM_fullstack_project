@@ -38,3 +38,25 @@ Temas a resaltar:
 <ul> Poder divirnos mejor las tareas. Y fijar qué es responsabilidad de cada uno para que cada parte del proyecto tenga el 100% de dedicación. </ul>
 
 <ul>Empezar a jugarsela más aunque tengamos temor de arruinar el trabajo. A veces vamos con resoluciones más convencionales por no sentirnos aptos de hacer algo más complicado. </ul>
+
+
+<h1>RETROSPECTIVA para encarar sprint 4<h1>
+<h3>Dinámica de la estrella de mar</h3>
+Temas a resaltar:
+
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+<ul> Aprender más sobre cómo sacarle ventaja a GitHub, para poder trabajar más tranquilos sin miedo a pisarnos. </ul>
+
+<ul> Volver a tener más reuniones entre todos los integrantes del equipo para poder avanzar ordenadamente. </ul>
+
+<ul> La buena predisposición y buen trato en el equipo es factor clave. Otra cosa que rescatamos es el incentivo y felicitación cuando alguien logra resolver algo nos venía costando. </ul>
+
+<ul> Estresarnos cuando las cosas no salen y no sabemos por qué. De a poco se va completando el Sprint y lo que parecía un monstruo interminable, empieza a mostrar el final. </ul>
+
+<ul>Es dificil ser crítico en qué deberíamos dejar de hacer cuando cada uno de nosotros tiene responsabilidades por fuera de este curso. Somos todos conscientes que nos tomamos el proyecto seriamente pero muchas veces pasa que no podemos dedicarle el tiempo que deberíamos (le dedicamos MUCHO, pero a veces requiere mas). </ul>
+
