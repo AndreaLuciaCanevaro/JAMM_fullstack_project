@@ -15,35 +15,22 @@
                 <h3 class="categorias">Todos los productos</h3>
                 <div class="products-b">
 
-                    <% for (i = 0 ; i < products.length ; i++) { %>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <section class="product-box">
-                                <!--código de Eliezer <a href="/products/<%= products[i].id %>"> -->
+                          <% products.forEach(function(prod){ %> 
+
+                                <article class="objeto">
+
                                     <a href="/productDetail/<%= prod.id %>"><img src="images/<%= prod.image %>" alt="Imagen" class="product_img">
-                                                                 <!-- código de Eliezer  "/images/products/<%= products[i].image %> -->                                    
-                                    
-                                     <!-- código de Eliezer: -->
-                                       <article class="objetos">
-                                        <h2>$<%= toThousand(products[i].price) %></h2>
-                                        <span><%= products[i].discount %> % OFF</span>
-                                        <p><%= products[i].name %></p>
-                                        <i class="fas fa-truck"></i>
-                                    </article>
+                                                           
+                                    <div class="main-article">
+                                <h4 class="description"><%= prod.name %></h4>
+                                </div>
+                                </article>
+                                                            
+                            <% }) %> 
+
                                 </a>
-                            </section>
-                        </div>
-
-                    
-                    <!-- <% productos.forEach(function(prod){ %> 
-
-                    <article class="objeto">
-                        <a href="/productDetail/<%= prod.id %>"><img src="images/<%= prod.image %>" alt="Imagen" class="product_img"></a>
-                        <div class="main-article">
-                            <h4 class="description"><%= prod.name %></h4>
-                        </div>
-                    </article>
-                    
-                    <% }) %>                 -->
+                    </section>
+                    </div>
                     
                 </div>
           

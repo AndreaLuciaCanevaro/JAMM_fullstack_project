@@ -45,21 +45,21 @@ const controller = {
 			fs.writeFileSync(productsFilePath, productsJSON);
 			res.redirect('/products'); 
 		} else {
-			res.render('crearProducto');
+			res.render('products/crearProducto');
             
 		}
 	},
 
     
 // Update - Form to edit
-editarProducto:(req,res) => {
-    res.render("products/editarProducto");
+edit:(req,res) => {
+    res.render("products/edit");
 },
 edit: (req, res) => {
     let idProduct = parseInt(req.params.id);
     let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     let productToEdit = products.filter(i => i.id === idProduct);
-    res.render('editarProducto', {productToEdit: productToEdit,
+    res.render('products/edit', {productToEdit: productToEdit,
         toThousand: toThousand}); 
 },
 // Update - Method to update

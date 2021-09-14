@@ -35,11 +35,10 @@ router.get("/emptyproductCart", productsController.emptyproductCart);
 /*** CREATE ONE PRODUCT ***/ 
 router.get("/crearProducto", productsController.crearProducto);
 router.post('/productCart', productsController.store); 
-router.post('/products', upload.single('fotoProducto'), productsController.store); 
-
+router.post('/products', upload.single('fotoProducto'), productsController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get("/editarProducto", productsController.editarProducto);
+router.get("/edit", productsController.edit);
 //router.get('/:id/edit', productsController.edit); 
 router.put('/:id', productsController.update); 
 
