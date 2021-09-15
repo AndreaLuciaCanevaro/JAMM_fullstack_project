@@ -16,7 +16,7 @@ const controller = {
         let idProduct = parseInt(req.params.id);
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let product = products.filter (i => i.id === idProduct);
-        res.render("products/productDetail", { product : product, toThousand: toThousand, dotToComma: dotToComma });
+        res.render("products/productDetail", { producto : product, toThousand: toThousand, dotToComma: dotToComma });
     },
     emptyproductCart:(req,res) => {
         res.render("emptyproductCart");
