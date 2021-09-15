@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head" , {title:"Editar producto"}) %>
+    <%- include("../partials/head" , {title:"Editar Producto"}) %>
 
 <body>
 
@@ -13,29 +13,49 @@
     </header>
 <br>
     <div class="contenedor-login">
-    <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" class="create-form">
+    <form action="/products/edit/<%= productToEdit[0].id %>?_method=PUT" method="POST" class="create-form">
         <div class="control-formulario">
             <label>Editar producto</label>
         </div>
         <div class="control-formulario">
             <label>Nombre del producto:</label>
-            <input type="text" name="nombreproducto" placeholder="Mouse XR3000" class="control">
+            <input type="text" name="nombreproducto" placeholder="Mouse XR3000" class="control" value="<%= productToEdit[0].name %>">
+          
         </div> 
         <div class="control-formulario">
             <label>Descripción:</label>
-            <textarea type="text" name="descripcion" placeholder="Describe el producto" class="control"> </textarea>
+            <textarea type="text" name="descripcion" placeholder="Describe el producto" class="control"><%= productToEdit[0].description %></textarea>
         </div> 
         <div class="control-formulario">
-            <input type="file" name="fotoProducto" accept=".jpg, .png" multiple>
+            <input type="file" name="fotoProducto" accept=".jpg, .png" multiple>  <!-- cómo agregar imagen -->
         </div>
         <div class="control-formulario">
             <label>Categoría:</label>
             <select name="categoria" class="control">
-            <option value="Ninguna" selected disabled>Elegir categoría</option>
-            <option value="Gaming">Gaming</option>
-            <option value="Accesorios">Accesorios</option>
-            <option value="Dispositivos">Dispositivos</option>
-        </select>
+
+                <% if (productToEdit[0].category === "Gaming") { %>
+							
+                    <option value="">Elegí</option>
+                    <option value="Gaming" selected>Gaming</option>
+                    <option value="Accesorios">Accesorios</option>
+                    <option value="Dispositivos">Dispositivos</option>
+                    <% } else if (productToEdit[0].category === "Accesorios") { %>
+                    <option value="">Elegí</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Accesorios" selected>Accesorios</option>
+                    <option value="Dispositivos">Dispositivos</option>
+                    <% } else if (productToEdit[0].category === "Dispositivos") { %>
+                    <option value="">Elegí</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Accesorios">Accesorios</option>
+                    <option value="Dispositivos" selected>Dispositivos</option>
+                    <% } else { %>
+                    <option value="Ninguna" selected>Elegir categoría</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Accesorios">Accesorios</option>
+                    <option value="Dispositivos">Dispositivos</option>
+                    <% } %>
+            </select>
         </div>   
         <div class="control-formulario">
             <label>Color:</label>
@@ -50,7 +70,7 @@
         </div>   
         <div class="control-formulario">
             <label>Precio $AR:</label>
-            <input type="number" name="precio" placeholder="200,50" class="control">
+            <input type="number" name="precio" placeholder="200,50" class="control" value="<%= productToEdit[0].price %>">
         </div>   
         
         <div class="control-formulario">  
