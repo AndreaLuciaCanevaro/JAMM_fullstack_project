@@ -38,6 +38,7 @@ const controller = {
 				discount: req.body.discount,
 				category: req.body.category,
 				description: req.body.description,
+                color: req.body.color,
 				image: req.file.filename
 			};
 			products.push(newProduct);
@@ -73,6 +74,8 @@ update: (req, res) => {
             product.discount = req.body.discount;
             product.category = req.body.category;
             product.description = req.body.description;
+            product.color = req.body.color;
+				
             if (req.file) {
                 let indexProduct = products.findIndex(product => product.id === idProduct);
                 let imagePath = path.join(__dirname, '../../public/images', products[indexProduct].image);

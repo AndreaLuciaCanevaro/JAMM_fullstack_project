@@ -60,12 +60,51 @@
         <div class="control-formulario">
             <label>Color:</label>
             <select name="color" class="control">
-            <option value="Niguno" selected disabled>Seleccionar color</option>
-            <option value="Blanco">Blanco</option>
-            <option value="Negro">Negro</option>
-            <option value="Rojo">Rojo</option>
-            <option value="Azul">Azul</option>
-            <option value="Otro">Otro</option>
+
+                <% if (productToEdit[0].color === "Blanco") { %>
+                    <option value="">Elegí el color</option>
+                    <option value="Blanco" selected>Blanco</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Otro">Otro</option>
+                    <% else if (productToEdit[0].color === "Negro") { %>
+                    <option value="">Elegí el color</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Negro" selected>Negro</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Otro">Otro</option>
+                    <% else if (productToEdit[0].color === "Rojo") { %>
+                    <option value="">Elegí el color</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Rojo" selected>Rojo</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Otro">Otro</option>
+                    <% else if (productToEdit[0].color === "Azul") { %>
+                    <option value="">Elegí el color</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Azul" selected>Azul</option>
+                    <option value="Otro">Otro</option>
+                    <% else if (productToEdit[0].color === "Otro") { %>
+                    <option value="">Elegí el color</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Otro" selected>Otro</option>
+                    <% else { %>
+                    <option value="Niguno" selected>Seleccionar color</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Otro">Otro</option>  
+                   
+                <% } %>
         </select>
         </div>   
         <div class="control-formulario">
