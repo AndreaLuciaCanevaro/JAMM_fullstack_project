@@ -285,6 +285,19 @@ article div.main-article{
     border-radius: 5px;
 }
 
+.boton-formulario-borrar {
+    background-color: #f80101be;
+    border: none;
+    font-size: 15px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.boton-formulario-borrar:hover {
+    color: #fffb00;
+}
+
 .boton-formulario:hover {
     color: #FFC93C;
 }

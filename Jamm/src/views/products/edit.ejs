@@ -117,6 +117,12 @@
         
         </div>
 
+        <form method="POST" action="/edit/<%= productToEdit[0].id %>?_method=DELETE">
+        <div class="control-formulario">  
+            <button type="submit" class="boton-formulario-borrar">Eliminar producto</button>
+            </div>
+        </form>
+
         <div class="control-formulario">  
 
             <button type="reset" class="boton-formulario">Cancelar</button>
