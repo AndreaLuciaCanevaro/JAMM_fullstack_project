@@ -28,6 +28,8 @@ router.get("/products", productsController.allProducts);
 
 /*** GET ONE PRODUCT ***/ 
 router.get("/productDetail/:id", productsController.productDetail);
+
+/*** PRODUCT CART ***/
 router.get("/productCart", productsController.productCart);
 router.get("/emptyproductCart", productsController.emptyproductCart);
 

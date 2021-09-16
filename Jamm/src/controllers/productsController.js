@@ -16,7 +16,7 @@ const controller = {
         let idProduct = parseInt(req.params.id);
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let product = products.filter (i => i.id === idProduct);
-        res.render("products/productDetail", { producto : product, toThousand: toThousand, dotToComma: dotToComma });
+        res.render("products/productDetail", { products : product, toThousand: toThousand, dotToComma: dotToComma });
     },
     emptyproductCart:(req,res) => {
         res.render("emptyproductCart");
@@ -33,11 +33,11 @@ const controller = {
 			let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 			let newProduct = {
 				id: Date.now(),
-				name: req.body.name,
-				price: req.body.price,
-				discount: req.body.discount,
-				category: req.body.category,
-				description: req.body.description,
+				name: req.body.nombreproducto,
+				price: req.body.precio,
+				//discount: req.body.discount,
+				category: req.body.categoria,
+				description: req.body.descripcion,
                 color: req.body.color,
 				image: req.file.filename
 			};
