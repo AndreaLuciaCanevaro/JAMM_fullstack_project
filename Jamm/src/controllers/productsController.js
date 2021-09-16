@@ -53,9 +53,7 @@ const controller = {
 
     
 // Update - Form to edit
-edit:(req,res) => {
-    res.render("products/edit");
-},
+
 edit: (req, res) => {
     let idProduct = parseInt(req.params.id);
     let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -69,11 +67,11 @@ update: (req, res) => {
     let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     products.forEach(product => {
         if(product.id === idProduct) {
-            product.name = req.body.name;
-            product.price = req.body.price;
-            product.discount = req.body.discount;
-            product.category = req.body.category;
-            product.description = req.body.description;
+            product.name = req.body.nombreproducto;
+            product.price = req.body.precio;
+            //product.discount = req.body.discount;
+            product.category = req.body.categoria;
+            product.description = req.body.descripcion;
             product.color = req.body.color;
 				
             if (req.file) {
