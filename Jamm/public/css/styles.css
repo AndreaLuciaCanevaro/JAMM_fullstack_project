@@ -163,6 +163,18 @@ article div.main-article{
 
 /* termima product detail */
 
+/* Intentando corregir como se muestran los productos en /products */
+
+.productos-corregidos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 40vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
 
 
 @media (min-width: 361px){
