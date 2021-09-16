@@ -42,6 +42,6 @@ router.get("/edit/:id", productsController.edit);
 router.put("/edit/:id", upload.single('fotoProducto'), productsController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/productDetail/:id', productsController.destroy);
+router.delete('/edit/:id', productsController.destroy);
 
 module.exports = router;
