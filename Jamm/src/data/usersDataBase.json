@@ -1,0 +1,20 @@
+[
+    {
+        "id": "593732624-5",
+        "firstName": " Ana ",
+        "lastName": " Peréz ",
+        "email": "anaperez@mailto.com",
+        "password": "12345678",
+        "image": " ",
+        "category": " "
+    },
+    {
+        "id": "135406862-9",
+        "firstName": " Tomás ",
+        "lastName": " Sánchez ",
+        "email": "tomassanchez@mailto.com",
+        "password": "12345678",
+        "image": " ",
+        "category": " "
+    }
+]
