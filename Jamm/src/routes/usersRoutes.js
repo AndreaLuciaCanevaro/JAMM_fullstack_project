@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const usersController= require("../controllers/usersController");
-const upload = require('../middlewares/usersImageMW');
-const validations = require('../middlewares/registerValidationsMW'); 
+const upload = require('../middlewares/usersImgMW');
+const validations = require('../middlewares/registerMW'); 
 
 const multer = require('multer');
 const path = require('path');

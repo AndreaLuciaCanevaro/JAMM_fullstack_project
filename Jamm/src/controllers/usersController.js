@@ -27,13 +27,12 @@ const usersController = {
           //console.log('pass de la base: userToLogin.password');
           //console.log(userToLogin.password);
           
-           let isOkThePassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar (cuando este el register terminado lo cambio)
-          //console.log('valor de isOkThePassword');
-          // console.log(isOkThePassword);
+           let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar (cuando este el register terminado lo cambio)
+          //console.log('valor de correctPassword');
+          // console.log(correctPassword);
           //si además está bien la contraseña               
-        if (isOkThePassword) {
-            
-            /*
+        if (correctPassword) {
+        /*
             delete userToLogin.password;
             req.session.userLogged = userToLogin; //guarda en sesion (del lado server) el usuario sin constraseña, la borró en la linea anterior
             //si está tidada la casilla de recordarme
