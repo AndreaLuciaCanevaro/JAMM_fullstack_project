@@ -1,47 +1,33 @@
-//const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 const User = require('../models/usersModels');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-//const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-//const usersDataBase = require ('../data/usersDataBase.json');
+const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const usersDataBase = require ('../data/usersDataBase.json');
 
 const usersController = {
     login:(req,res) => {
-        let title = 'Ingresá';
+        let title = 'Logueate';
         res.render("users/login", {title: title});
     },
     processLogin: (req, res) => {
-        let title = 'Ingresá';
-        let userToLogin = User.findByField('email',req.body.email);
-        //si se encuentra el mail ingresado en la base de datos
-        if(userToLogin) {
-           //let isOkThePassword = false;
-          // return res.send(userToLogin); //esto lo uso para validar el logui me muestra el usuario ingresado que se encontro en la base....
-           //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Compara usando encriptacion
-
-         // console.log('pass del formulario: req.body.password');
-          //console.log(req.body.password);
-          //console.log('pass de la base: userToLogin.password');
-          //console.log(userToLogin.password);
-          
-           let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar (cuando este el register terminado lo cambio)
-          //console.log('valor de correctPassword');
-          // console.log(correctPassword);
-          //si además está bien la contraseña               
+        let title = 'Logueate';
+        let userLogin = User.findByField('email',req.body.email);
+        if(userLogin) {
+        //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Para comparar usando encriptacion
+        let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar, VER
+        // console.log(correctPassword);
         if (correctPassword) {
-        /*
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin; //guarda en sesion (del lado server) el usuario sin constraseña, la borró en la linea anterior
-            //si está tidada la casilla de recordarme
-            if(req.body.remember_user) {
-                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })//crea una cookie y la guarda por: un minuto X 60 = una hora
-            }*/
+            //Recordarme:
+            //if(req.body.remember_user) {
+            //    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })//crea una cookie y la guarda por: un minuto X 60 = una hora
+            //}
 
-            //LISTO ACA ESTOY LOGEADO!!!! Por el momento redirigo a la pagina principal...
-            return res.redirect('/'); //Listo! esta logueado
+            //Usuario logueado, redirige al Home
+            return res.redirect('/');
             //res.send('usuario logueado con exito');
         }
             return res.render('users/login', {title: title,
