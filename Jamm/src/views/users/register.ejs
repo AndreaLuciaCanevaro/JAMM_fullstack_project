@@ -23,7 +23,7 @@
             
             value="<%= (locals.oldData && oldData.nombreapellido ? oldData.nombreapellido : '' %>">
             <% if (locals.errors && errors.nombreapellido) { %>
-                <p class="contMainFormA error"><%= errors.nombreapellido.msg %>  </p>
+                <p class="registerForm error"><%= errors.nombreapellido.msg %>  </p>
         <% } %>  
 
         </div> 
@@ -33,7 +33,7 @@
             
             value="<%= (locals.oldData && oldData.email) ? oldData.email : '' %>" >
             <% if (locals.errors && errors.email) { %>
-                <p class="contMainFormA error"><%= errors.email.msg %>  </p>
+                <p class="registerForm error"><%= errors.email.msg %>  </p>
             <% } %>  
 
         </div> 
@@ -42,7 +42,7 @@
             <input type="password" name="contraseña" placeholder="Contraseña" class="control">
 
             <% if (locals.errors && errors.password) { %>
-                <p class="contMainFormA error"><%= errors.password.msg %>  </p>
+                <p class="registerForm error"><%= errors.password.msg %>  </p>
             <% } %>
 
         </div>   
@@ -51,11 +51,19 @@
             <input type="password" name="contraseña" placeholder="Contraseña" class="control">
 
              <% if (locals.errors && errors.password) { %>
-                <p class="contMainFormA error"><%= errors.password.msg %>  </p>
+                <p class="registerForm error"><%= errors.password.msg %>  </p>
             <% } %>
 
         </div>   
 
+        <div class="control-formulario">
+        <label>Imagen</label>
+                <input type="file" name="image" placeholder="Imagen" class="registerFormImg">  
+                <% if (locals.errors && errors.image) { %>
+                    <p class="registerFormImg error"><%= errors.image.msg %>  </p>
+                <% } %>                  
+        </div>
+        
         <div class="control-formulario">  
 
         <button type="submit" class="boton-formulario">Registrarme</button>

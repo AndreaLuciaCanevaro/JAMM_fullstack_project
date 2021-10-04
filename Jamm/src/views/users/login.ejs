@@ -21,6 +21,7 @@
             <input type="text" name="usuario" placeholder="Usuario o mail" class="control">
 
             <% if(locals.errors && errors.email) { %>
+           <!-- ver esta clase-->
             <div class="text-danger">
                 <%= errors.email.msg %>
             </div>
