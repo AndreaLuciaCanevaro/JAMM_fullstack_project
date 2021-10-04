@@ -3,8 +3,8 @@ const router = express.Router();
 const usersController= require("../controllers/usersController");
 
 //Middlewares
-const upload = require('../middlewares/usersImgMW');
-const validations = require('../middlewares/registerMW'); 
+const upload = require('../middlewares/multerMiddleware');
+const validations = require('../middlewares/validateRegisterMiddleware'); 
 
 const multer = require('multer');
 const path = require('path');

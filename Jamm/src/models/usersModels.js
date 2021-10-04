@@ -9,7 +9,8 @@ const User = {
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
 	},
-
+//genera un ID porque cuando traigo a las usuarios con la consulta, no me trae la info del ID
+//obtengo el último ID si tengo usuarios, sino devuelve 1
 	generateId: function () {
 		let allUsers = this.findAll();
 		let lastUser = allUsers.pop();
@@ -39,7 +40,7 @@ const User = {
 		let allUsers = this.findAll();
 		let newUser = {
 			id: this.generateId(),
-			...userData
+			...userData //spread operator
 		}
 		allUsers.push(newUser);
 		fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
