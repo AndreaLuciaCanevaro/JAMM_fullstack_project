@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head" , {title:"Logueate"}) %>
+
+<body>
+
+    <header class="header-login">
+        <div>
+            <a href="/"> <img src="/images/JAMM-Gaming.png" class="logo-login"></a>
+        </div>
+          
+    </header>
+<br>
+<body>
+   <%- include ('partials/navbar'); %>
+
+   <!--Container: revisar clases-->
+   <div class="container" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-md-3">
+            <h2>Hola <%=user.fullName</h2>
+            <img src="images/users/<%= user.avatar %>">
+            <br>
+            <br>
+            <div class="alert alert-succes"><%= user.email %></div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer'); %>
+</body>
+</html>

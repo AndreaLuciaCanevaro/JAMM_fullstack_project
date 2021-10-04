@@ -19,8 +19,9 @@ const usersController = {
         if(userToLogin) {
         //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Para comparar usando encriptacion
         let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar, VER
-        // console.log(correctPassword);
+        
         if (correctPassword) {
+            delete userToLogin.password;
             req.session.userLogged = userToLogin;
             return res.redirect('/users/userProfile');
            
@@ -76,37 +77,15 @@ const usersController = {
 
 		let userCreated = User.create(userToCreate);
 		return res.redirect('/users/login');
+    },
+
+    profile: (req, res) => {
+        //console.log ('Estás en Profile');
+        //console.log (req.session);
+        return res.render ('userProfile');
+        user: req.session.userLogged
     }
 };
 
-    //processLogin:function(req,res){
-    //    let errors=validationResult(req);
-    //    if(errors.isEmpty()){
-    //        let usersJson=fs.readFileSync('usersDataBase.json',{errors:errors.errors});
-    //        let users;
-    //        if(usersJson==""){
-    //            users=[];
-    //        }else{
-    //            users=JSON.parse(usersJSON);
-    //        }
-    //        let usuarioALoguearse=users[i];
-    //        for(let i=0;i<users.length;i++){
-    //            if(users[i].email==req.body.email){
-    //                if(bcrypt.compareSync(req.body.password,users[i].password));
-    //                break;
-    //            }
-    //        }
-    //    }
-    //    if(usuarioALoguearse==undefined){
-    //        return res.render ('login', {errors:[
-    //            {msg:'Credenciales inválidas'}
-    //        ]});
-//        }
-    //    req.session.usuarioLogueado=usuarioALoguearse;
-    //    res.render('Success');
-    //}else{
-    //    return res.render('login',{errors:errors.errors});
-    //}
-//}
-//}
+
 module.exports= usersController;
