@@ -23,13 +23,12 @@ const usersController = {
         if (correctPassword) {
             delete userToLogin.password;
             req.session.userLogged = userToLogin;
-            return res.redirect('/users/userProfile');
-           
             //Recordarme:
-            //if(req.body.remember_user) {
-            //    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })//crea una cookie y la guarda por: un minuto X 60 = una hora
-            //}
-        }
+            if(req.body.remember_user) {
+                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })//crea una cookie y la guarda por: un minuto X 60 = una hora
+            };
+            return res.redirect('/users/userProfile');
+    }
             return res.render('users/login', {title: title,
                 errors: {
                     email: {
@@ -48,7 +47,6 @@ const usersController = {
         });
 },
     register:(req,res) => {
-        res.cookie('testing', 'Hola Mundo', {maxAge: 1000 * 30})
         let title= 'Registrate';
         res.render("users/register", {title: title});
     },
