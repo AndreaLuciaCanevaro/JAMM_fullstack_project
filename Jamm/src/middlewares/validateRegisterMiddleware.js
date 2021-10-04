@@ -2,8 +2,7 @@ const { body } = require('express-validator');
 const path = require('path');
 
 const validations = [
-    body('first_name').notEmpty().withMessage('Por favor escribe tu nombre'),
-    body('last_name').notEmpty().withMessage('Por favor escribe tu apellido'),
+    body('nombreapellido').notEmpty().withMessage('Por favor escribí tu nombre y apellido'),
     body('email')
         .notEmpty().withMessage('Por favor escribe tu email').bail()
         .isEmail().withMessage('Por favor escribe un formato válido de email'),
