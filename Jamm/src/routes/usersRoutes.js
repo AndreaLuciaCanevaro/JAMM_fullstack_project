@@ -11,14 +11,14 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const multer = require('multer');
 const path = require('path');
 
-const{check}=require('express-validator');
+const{body}=require('express-validator');
 
 //Formulario de Login
 router.get("/login", guestMiddleware, usersController.login);
 
 const validationsMailPw= [
-    check('email').isEmail().withMessage('Email inválido'),
-    check('password').isLength({min:8}).withMessage('contraseña incorrecta')
+    body('email').isEmail().withMessage('Email inválido'),
+    body('password').isLength({min:8}).withMessage('contraseña incorrecta')
 ];
 //Procesar el login
 router.post('/login',validationsMailPw,usersController.processLogin);
