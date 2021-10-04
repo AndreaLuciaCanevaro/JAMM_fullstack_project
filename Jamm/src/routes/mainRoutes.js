@@ -7,13 +7,4 @@ router.get("/", mainController.index);
 
 router.get('/search', mainController.search); 
 
-//agregamos sin saber
-//router.get('/pruebaSession',function(req,res){
-//    if(req.session.numeroVisitas==undifined){
-//        req.session.numeroVisitas=0;
-//    }
-//    req.session.numeroVisitas++;
-//    res.send('Session tiene el número: '+req.session.numeroVisitas);
-//})
-
 module.exports = router;
