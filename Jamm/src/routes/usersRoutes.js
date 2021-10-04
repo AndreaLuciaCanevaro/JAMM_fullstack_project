@@ -31,4 +31,7 @@ router.post('/register', upload.single('image'), validations, usersController.pr
 //Si las credenciales son válidas se redirige al usuario a esta ruta
 router.get ('/userProfile',authMiddleware,  usersController.profile);
 
+//Logout
+router.get ('/logout/', usersController.profile);
+
 module.exports = router;

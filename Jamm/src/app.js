@@ -8,6 +8,8 @@ const mainRoutes = require ("./routes/mainRoutes");
 const productsRoutes = require ("./routes/productsRoutes");
 const usersRoutes = require ("./routes/usersRoutes");
 
+const userLoggedMiddleware = require ("./middlewares/userLoggedMiddleware");
+
 //USE
 app.use(express.static ("../public"));
 app.use(methodOverride('_method'));
@@ -23,6 +25,8 @@ app.use(session({
 app.use("/", mainRoutes);
 app.use("/", productsRoutes);
 app.use("/", usersRoutes);
+
+app.use(userLoggedMiddleware);
 
 //SET
 app.set("view engine" , "ejs");
