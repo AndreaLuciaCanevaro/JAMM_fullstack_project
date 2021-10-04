@@ -80,8 +80,6 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        //console.log ('Estás en Profile');
-        //console.log (req.session);
         return res.render ('userProfile');
         user: req.session.userLogged
     }

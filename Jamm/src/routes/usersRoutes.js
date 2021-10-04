@@ -5,7 +5,8 @@ const usersController= require("../controllers/usersController");
 //Middlewares
 const upload = require('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegisterMiddleware'); 
-const guestMiddleware = require('../middlewares/guestMiddleware'); 
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware'); 
 
 const multer = require('multer');
 const path = require('path');
@@ -13,7 +14,7 @@ const path = require('path');
 const{check}=require('express-validator');
 
 //Formulario de Login
-router.get("/login", usersController.login);
+router.get("/login", guestMiddleware, usersController.login);
 
 const validationsMailPw= [
     check('email').isEmail().withMessage('Email inválido'),
@@ -28,6 +29,6 @@ router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', upload.single('image'), validations, usersController.processRegister);
 
 //Si las credenciales son válidas se redirige al usuario a esta ruta
-router.get ('/userProfile', usersController.profile);
+router.get ('/userProfile',authMiddleware,  usersController.profile);
 
 module.exports = router;
