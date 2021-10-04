@@ -26,4 +26,7 @@ router.get('/register', usersController.register);
 //Procesar el registro
 router.post('/register', upload.single('image'), validations, usersController.processRegister);
 
+//Si las credenciales son válidas se redirige al usuario a esta ruta
+router.get ('/userProfile', usersController.profile);
+
 module.exports = router;

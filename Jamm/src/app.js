@@ -13,8 +13,12 @@ app.use(express.static ("../public"));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
-//VER CÓMO FUNCIONA ESTO
-app.use(session({secret:'Esto es un secreto'}));
+
+app.use(session({
+    secret:'Esto es un secreto',
+    resave: false,
+    saveUninitialized: false,
+}));
 //revisar ruta
 app.use("/", mainRoutes);
 app.use("/", productsRoutes);

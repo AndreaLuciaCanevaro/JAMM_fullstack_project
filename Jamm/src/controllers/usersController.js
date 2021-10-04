@@ -21,19 +21,18 @@ const usersController = {
         let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar, VER
         // console.log(correctPassword);
         if (correctPassword) {
+            req.session.userLogged = userToLogin;
+            return res.redirect('/users/userProfile');
+           
             //Recordarme:
             //if(req.body.remember_user) {
             //    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })//crea una cookie y la guarda por: un minuto X 60 = una hora
             //}
-
-            //Usuario logueado, redirige al Home
-            return res.redirect('/');
-            //res.send('usuario logueado con exito');
         }
             return res.render('users/login', {title: title,
                 errors: {
                     email: {
-                        msg: 'No se encuentra este email en la base de datos'
+                        msg: 'Las credenciales son inválidas'
                     }
                 }
             });
