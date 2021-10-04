@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const session = require ('express-session');
+const cookies = require ('cookie-parser');
 const mainRoutes = require ("./routes/mainRoutes"); 
 const productsRoutes = require ("./routes/productsRoutes");
 const usersRoutes = require ("./routes/usersRoutes");
@@ -27,6 +28,7 @@ app.use("/", productsRoutes);
 app.use("/", usersRoutes);
 //va siempre después de app.use de session
 app.use(userLoggedMiddleware);
+app.use (cookies());
 
 //SET
 app.set("view engine" , "ejs");

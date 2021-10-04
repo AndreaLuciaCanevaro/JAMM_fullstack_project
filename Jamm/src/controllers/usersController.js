@@ -48,6 +48,7 @@ const usersController = {
         });
 },
     register:(req,res) => {
+        res.cookie('testing', 'Hola Mundo', {maxAge: 1000 * 30})
         let title= 'Registrate';
         res.render("users/register", {title: title});
     },
