@@ -13,7 +13,8 @@
     </header>
 <br>
     <div class="contenedor-login">
-    <form action="/" method="GET" class="create-form">
+<!-- la ruta no debería ser action = "/users/register"? -->
+    <form class="create-form" action="/" method="GET" method="POST" enctype="multipart/form-data">
         <div class="control-formulario">
             <label>¡Contanos quién sos!</label>
         </div>
@@ -21,7 +22,7 @@
             <label>Nombre y apellido:</label>
             <input type="text" name="nombreapellido" placeholder="Juan Pérez" class="control" 
             
-            value="<%= (locals.oldData && oldData.nombreapellido ? oldData.nombreapellido : '' %>">
+            value="<%= (locals.oldData && oldData.nombreapellido) ? oldData.nombreapellido : '' %>">
             <% if (locals.errors && errors.nombreapellido) { %>
                 <p class="registerForm error"><%= errors.nombreapellido.msg %>  </p>
         <% } %>  
