@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/users.json');
+const productsFilePath = path.join(__dirname, '../data/usersDataBase.json');
 
 const User = {
 	fileName: productsFilePath,
@@ -34,7 +34,7 @@ const User = {
 		let userFound = allUsers.find(oneUser => oneUser[field] === text);
 		return userFound;
 	},
-
+	
 	create: function (userData) {
 		let allUsers = this.findAll();
 		let newUser = {
