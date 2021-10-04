@@ -25,7 +25,7 @@ app.use(session({
 app.use("/", mainRoutes);
 app.use("/", productsRoutes);
 app.use("/", usersRoutes);
-
+//va siempre después de app.use de session
 app.use(userLoggedMiddleware);
 
 //SET
