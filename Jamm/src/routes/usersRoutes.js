@@ -18,6 +18,7 @@ const validationsMailPw= [
     check('email').isEmail().withMessage('Email inválido'),
     check('password').isLength({min:8}).withMessage('contraseña incorrecta')
 ];
+//Procesar el login
 router.post('/login',validationsMailPw,usersController.processLogin);
 
 //Formulario de registro

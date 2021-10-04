@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head" , {title:"Logeate"}) %>
+    <%- include("../partials/head" , {title:"Logueate"}) %>
 
 <body>
 
@@ -19,6 +19,13 @@
         <div class="control-formulario">
             <label>Usuario o email:</label>
             <input type="text" name="usuario" placeholder="Usuario o mail" class="control">
+
+            <% if(locals.errors && errors.email) { %>
+            <div class="text-danger">
+                <%= errors.email.msg %>
+            </div>
+            <% } %>
+
         </div> 
         <div class="control-formulario">
             <label>Contraseña:</label>

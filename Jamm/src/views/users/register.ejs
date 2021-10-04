@@ -19,19 +19,41 @@
         </div>
         <div class="control-formulario">
             <label>Nombre y apellido:</label>
-            <input type="text" name="nombreapellido" placeholder="Juan Pérez" class="control">
+            <input type="text" name="nombreapellido" placeholder="Juan Pérez" class="control" 
+            
+            value="<%= (locals.oldData && oldData.nombreapellido ? oldData.nombreapellido : '' %>">
+            <% if (locals.errors && errors.nombreapellido) { %>
+                <p class="contMainFormA error"><%= errors.nombreapellido.msg %>  </p>
+        <% } %>  
+
         </div> 
         <div class="control-formulario">
             <label>Email:</label>
-            <input type="email" name="mail" placeholder="juan@hotmail.com" class="control">
+            <input type="email" name="mail" placeholder="juan@hotmail.com" class="control"
+            
+            value="<%= (locals.oldData && oldData.email) ? oldData.email : '' %>" >
+            <% if (locals.errors && errors.email) { %>
+                <p class="contMainFormA error"><%= errors.email.msg %>  </p>
+            <% } %>  
+
         </div> 
         <div class="control-formulario">
             <label>Contraseña:</label>
             <input type="password" name="contraseña" placeholder="Contraseña" class="control">
+
+            <% if (locals.errors && errors.password) { %>
+                <p class="contMainFormA error"><%= errors.password.msg %>  </p>
+            <% } %>
+
         </div>   
         <div class="control-formulario">
             <label>Confirmar contraseña:</label>
             <input type="password" name="contraseña" placeholder="Contraseña" class="control">
+
+             <% if (locals.errors && errors.password) { %>
+                <p class="contMainFormA error"><%= errors.password.msg %>  </p>
+            <% } %>
+
         </div>   
 
         <div class="control-formulario">  

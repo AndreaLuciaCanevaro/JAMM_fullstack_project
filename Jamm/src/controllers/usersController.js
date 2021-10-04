@@ -15,8 +15,8 @@ const usersController = {
     },
     processLogin: (req, res) => {
         let title = 'Logueate';
-        let userLogin = User.findByField('email',req.body.email);
-        if(userLogin) {
+        let userToLogin = User.findByField('email',req.body.email);
+        if(userToLogin) {
         //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Para comparar usando encriptacion
         let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar, VER
         // console.log(correctPassword);
@@ -33,7 +33,7 @@ const usersController = {
             return res.render('users/login', {title: title,
                 errors: {
                     email: {
-                        msg: 'Contraseña inválida'
+                        msg: 'No se encuentra este email en la base de datos'
                     }
                 }
             });
@@ -70,7 +70,7 @@ const usersController = {
 			});
 		}
 		let userToCreate = {
-			...req.body,
+			...req.body, //spread operator
 			password: bcryptjs.hashSync(req.body.password, 10),
 			image: req.file.filename
 		}
