@@ -1,6 +1,6 @@
 //const fs = require('fs');
 const path = require('path');
-const User = require('../models/userModel');
+const User = require('../models/usersModels');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -13,7 +13,7 @@ const usersController = {
         let title = 'Ingresá';
         res.render("users/login", {title: title});
     },
-    loginProcess: (req, res) => {
+    processLogin: (req, res) => {
         let title = 'Ingresá';
         let userToLogin = User.findByField('email',req.body.email);
         //si se encuentra el mail ingresado en la base de datos

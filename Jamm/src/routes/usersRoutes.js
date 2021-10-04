@@ -12,12 +12,13 @@ const{check}=require('express-validator');
 router.get("/login", usersController.login);
 router.get("/register", usersController.register);
 
-router.post('/login',[
+const validationsMailPw= [
     check('email').isEmail().withMessage('Email inválido'),
     check('password').isLength({min:8}).withMessage('contraseña incorrecta')
-],usersController.processLogin);
+];
+router.post('/login',validationsMailPw,usersController.processLogin);
 
-router.get('/register', usersControllers.register);
-router.post('/register', upload.single('image'), validations, usersControllers.processRegister);
+router.get('/register', usersController.register);
+router.post('/register', upload.single('image'), validations, usersController.processRegister);
 
 module.exports = router;
