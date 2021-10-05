@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const User = require('../models/UsersModels');
+const User = require('../models/usersModels');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
