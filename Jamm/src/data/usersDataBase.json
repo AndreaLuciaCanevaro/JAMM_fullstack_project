@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "firstName": " Ana ",
+        "fullName": " Ana ",
         "lastName": " Peréz ",
         "email": "anaperez@mailto.com",
         "password": "12345678",
@@ -10,7 +10,7 @@
     },
     {
         "id": "2",
-        "firstName": " Tomás ",
+        "fullName": " Tomás ",
         "lastName": " Sánchez ",
         "email": "tomassanchez@mailto.com",
         "password": "12345678",
