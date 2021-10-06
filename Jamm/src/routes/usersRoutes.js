@@ -14,6 +14,7 @@ const multer = require('multer');
 const path = require('path');
 
 const{body}=require('express-validator');
+const userLoggedMiddleware = require("../middlewares/userLoggedMiddleware");
 
 //Formulario de Login
 router.get("/users/login", guestMiddleware, usersController.login);
@@ -30,6 +31,9 @@ router.get('/register', guestMiddleware, usersController.register);
 
 //Procesar el registro
 router.post('/register', upload.single('image'), validations, usersController.processRegister);
+
+//Formulario de userProfile
+router.get("/users/userProfile", userLoggedMiddleware, usersController.profile);
 
 //Si las credenciales son válidas se redirige al usuario a esta ruta
 router.get ('/users/userProfile',authMiddleware,  usersController.profile);

@@ -83,7 +83,7 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        return res.render ('userProfile',{
+        return res.render ('users/userProfile',{
         user: req.session.userLogged
     });
     },
