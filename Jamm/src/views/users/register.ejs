@@ -20,11 +20,11 @@
         </div>
         <div class="control-formulario">
             <label>Nombre y apellido:</label>
-            <input type="text" name="nombreapellido" placeholder="Juan Pérez" class="control" 
+            <input type="text" name="fullName" placeholder="Juan Pérez" class="control" 
             
-            value="<%= (locals.oldData && oldData.nombreapellido) ? oldData.nombreapellido : '' %>">
-            <% if (locals.errors && errors.nombreapellido) { %>
-                <p class="registerForm error"><%= errors.nombreapellido.msg %>  </p>
+            value="<%= (locals.oldData && oldData.fullName) ? oldData.fullName : '' %>">
+            <% if (locals.errors && errors.fullName) { %>
+                <p class="registerForm error"><%= errors.fullName.msg %>  </p>
         <% } %>  
 
         </div> 

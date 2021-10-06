@@ -4,9 +4,12 @@ const User = require('../models/usersModels');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+/* Lista de usuarios .JSON */
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-const usersDataBase = require ('../data/usersDataBase.json');
+//esta contante creo que hace lo mmismo que la línea 9 y 10
+//const usersDataBase = require ('../data/usersDataBase.json');
 
 const usersController = {
     login:(req,res) => {
@@ -17,8 +20,8 @@ const usersController = {
         let title = 'Logueate';
         let userToLogin = User.findByField('email',req.body.email);
         if(userToLogin) {
-        //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Para comparar usando encriptacion
-        let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar, VER
+        let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Para comparar usando encriptacion
+        //let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar, VER
         
         if (correctPassword) {
             delete userToLogin.password;
@@ -55,6 +58,7 @@ const usersController = {
         let validationsResult = validationResult(req);
         
         if (validationsResult.errors.length > 0) {
+                                                                            //mapped() convierte un array en objeto literal
             return res.render('users/register' , { title: title, errors: validationsResult.mapped(), oldData: req.body});
         }
         let userInDB = User.findByField('email', req.body.email);

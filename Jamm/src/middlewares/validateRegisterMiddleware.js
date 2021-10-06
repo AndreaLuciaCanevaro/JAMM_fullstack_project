@@ -1,8 +1,9 @@
 const { body } = require('express-validator');
 const path = require('path');
 
+//validación de registro: fullName, email, password e image
 const validations = [
-    body('nombreapellido').notEmpty().withMessage('Por favor escribí tu nombre y apellido'),
+    body('fullName').notEmpty().withMessage('Por favor escribí tu nombre y apellido'),
     body('email')
         .notEmpty().withMessage('Por favor escribe tu email').bail()
         .isEmail().withMessage('Por favor escribe un formato válido de email'),

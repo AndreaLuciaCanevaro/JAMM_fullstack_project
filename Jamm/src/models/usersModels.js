@@ -23,19 +23,19 @@ const User = {
 	findAll: function () {
 		return this.getData();
 	},
-
+  //Buscar un usuario por su ID
 	findByPk: function (id) {
 		let allUsers = this.findAll();
 		let userFound = allUsers.find(oneUser => oneUser.id === id);
 		return userFound;
 	},
-
+	//Buscar un usuario por un campo
 	findByField: function (field, text) {
 		let allUsers = this.findAll();
 		let userFound = allUsers.find(oneUser => oneUser[field] === text);
 		return userFound;
 	},
-	
+	//Crear usuario
 	create: function (userData) {
 		let allUsers = this.findAll();
 		let newUser = {
@@ -47,7 +47,7 @@ const User = {
 		fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
 		return newUser;
 	},
-
+	//Borrar usuario
 	delete: function (id) {
 		let allUsers = this.findAll();
 		let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
