@@ -16,14 +16,14 @@ const path = require('path');
 const{body}=require('express-validator');
 
 //Formulario de Login
-router.get("/login", guestMiddleware, usersController.login);
+router.get("/users/login", guestMiddleware, usersController.login);
 
 const validationsMailPw= [
     body('email').isEmail().withMessage('Email inválido'),
     body('password').isLength({min:8}).withMessage('contraseña incorrecta')
 ];
 //Procesar el login
-router.post('/login',validationsMailPw,usersController.processLogin);
+router.post('/users/login',validationsMailPw,usersController.processLogin);
 
 //Formulario de registro
 router.get('/register', guestMiddleware, usersController.register);
@@ -32,9 +32,9 @@ router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', upload.single('image'), validations, usersController.processRegister);
 
 //Si las credenciales son válidas se redirige al usuario a esta ruta
-router.get ('/userProfile',authMiddleware,  usersController.profile);
+router.get ('/users/userProfile',authMiddleware,  usersController.profile);
 
 //Logout
 router.get ('/logout/', usersController.profile);
 
-module.exports = router;
+module.exports = router;    
