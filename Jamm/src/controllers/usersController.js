@@ -55,7 +55,7 @@ const usersController = {
         let validationsResult = validationResult(req);
         
         if (validationsResult.errors.length > 0) {
-            return res.render('users/register' , { title: title, errors: validationsResult.mapped(), oldData: req.body})
+            return res.render('users/register' , { title: title, errors: validationsResult.mapped(), oldData: req.body});
         }
         let userInDB = User.findByField('email', req.body.email);
 		if (userInDB) {
@@ -79,8 +79,9 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        return res.render ('userProfile');
+        return res.render ('userProfile',{
         user: req.session.userLogged
+    });
     },
 
     logout: (req,res) => {
