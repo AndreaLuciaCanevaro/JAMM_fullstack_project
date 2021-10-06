@@ -9,7 +9,7 @@ function userLoggedMiddleware (req, res, next){
     if (userFromCookie){
         req.session.userLogged = userFromCookie;
     }
-// esto es lo mismo que hacer req.session && req.session.userLogged
+// req.session?.userLogged es igual a hacer req.session && req.session.userLogged
     if(req.session?.userLogged){
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
