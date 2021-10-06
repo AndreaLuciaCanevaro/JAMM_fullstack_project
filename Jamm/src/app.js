@@ -22,11 +22,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
-//revisar ruta
-app.use("/", mainRoutes);
-app.use("/", productsRoutes);
-app.use("/", usersRoutes);
-//va siempre después de app.use de session
+//va siempre ANTES de app.use de session
 app.use(userLoggedMiddleware);
 app.use (cookies());
 
@@ -34,6 +30,11 @@ app.use (cookies());
 app.set("view engine" , "ejs");
 app.set("public", path.join(__dirname, "public"));
 app.set('views', path.join(__dirname, 'views'));
+
+//revisar ruta
+app.use("/", mainRoutes);
+app.use("/", productsRoutes);
+app.use("/", usersRoutes);
 
 app.listen(3010, ()=>{
     console.log('Servidor funcionando');

@@ -42,6 +42,7 @@ const User = {
 			id: this.generateId(),
 			...userData //spread operator
 		}
+		console.log("newUser",newUser)
 		allUsers.push(newUser);
 		fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
 		return newUser;
