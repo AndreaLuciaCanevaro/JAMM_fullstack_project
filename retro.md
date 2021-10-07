@@ -60,3 +60,23 @@ Temas a resaltar:
 
 <ul>Es dificil ser crítico en qué deberíamos dejar de hacer cuando cada uno de nosotros tiene responsabilidades por fuera de este curso. Somos todos conscientes que nos tomamos el proyecto seriamente pero muchas veces pasa que no podemos dedicarle el tiempo que deberíamos (le dedicamos MUCHO, pero a veces requiere mas). </ul>
 
+<h1>RETROSPECTIVA para encarar sprint 5<h1>
+<h3>Dinámica de la estrella de mar</h3>
+Temas a resaltar:
+
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+<ul> Ir haciendo de a poco el Sprint, buscando espacios entre trabajo, clases, vida, etc. para no tener que resolver todos los problemas juntos. </ul>
+
+<ul> Volver a tener más reuniones entre todos los integrantes del equipo para poder avanzar ordenadamente. </ul>
+
+<ul> Seguir comunicándonos entre nosotros ante cualquier duda, consulta o cambio en el proyecto. </ul>
+
+<ul> Seguir avanzando a pesar de detectar que hay errores en el proyecto. Los errores se arrastran y cada vez es más dificil detectarlos y solucionarlos. No deberiamos pushear un código con errores (Por lo menos no en la rama main) </ul>
+
+<ul>Este punto sigue siendo similar a los sprints anteriores. Es dificil ser crítico en qué deberíamos dejar de hacer cuando cada uno de nosotros tiene responsabilidades por fuera de este curso. Somos todos conscientes que nos tomamos el proyecto seriamente pero muchas veces pasa que no podemos dedicarle el tiempo que deberíamos (le dedicamos MUCHO, pero a veces requiere mas). </ul>
+
