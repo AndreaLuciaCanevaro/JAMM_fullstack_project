@@ -39,6 +39,6 @@ router.get("/users/userProfile", userLoggedMiddleware, usersController.profile);
 router.get ('/users/userProfile',authMiddleware,  usersController.profile);
 
 //Logout
-router.get ('/logout/', usersController.profile);
+router.get ('/users/logout', usersController.logout);
 
 module.exports = router;    

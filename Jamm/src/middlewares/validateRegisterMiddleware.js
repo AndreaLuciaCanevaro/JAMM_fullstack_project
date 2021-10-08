@@ -5,8 +5,8 @@ const path = require('path');
 const validations = [
     body('fullName').notEmpty().withMessage('Por favor escribí tu nombre y apellido'),
     body('email')
-        .notEmpty().withMessage('Por favor escribe tu email').bail()
-        .isEmail().withMessage('Por favor escribe un formato válido de email'),
+        .isEmpty().withMessage('Por favor escribe tu email').bail(),
+       // .isEmail().withMessage('Por favor escribe un formato válido de email'),
     body('password').notEmpty().withMessage('Por favor escribe una contraseña'),
     body('image').custom((value, { req }) => {
         let file = req.file;

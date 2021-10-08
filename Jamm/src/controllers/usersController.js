@@ -8,7 +8,7 @@ const { validationResult } = require('express-validator');
 /* Lista de usuarios .JSON */
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-//esta contante creo que hace lo mmismo que la línea 9 y 10
+//esta constante creo que hace lo mmismo que la línea 9 y 10
 //const usersDataBase = require ('../data/usersDataBase.json');
 
 const usersController = {
@@ -57,7 +57,7 @@ const usersController = {
         let title= 'Registrate';
         let validationsResult = validationResult(req);
         
-        if (validationsResult.errors.length > 0) {
+        if (!validationsResult.isEmpty()) {
                                                                             //mapped() convierte un array en objeto literal
             return res.render('users/register' , { title: title, errors: validationsResult.mapped(), oldData: req.body});
         }
@@ -78,7 +78,7 @@ const usersController = {
 			image: req.file.filename
 		}
 
-		let userCreated = User.create(userToCreate);
+		User.create(userToCreate);
 		return res.redirect('/users/login');
     },
 
@@ -89,8 +89,10 @@ const usersController = {
     },
 
     logout: (req,res) => {
-        res.clearCookie ('userEmail');
+        //res.clearCookie ('userEmail');
+        console.log(req.session);
         req.session.destroy();
+        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 0 })
         return res.redirect ('/');
     }
 };

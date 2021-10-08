@@ -1,20 +1,27 @@
 [
-    {
-        "id": "1",
-        "fullName": " Ana ",
-        "lastName": " Peréz ",
-        "email": "anaperez@mailto.com",
-        "password": "12345678",
-        "image": " ",
-        "category": " "
-    },
-    {
-        "id": "2",
-        "fullName": " Tomás ",
-        "lastName": " Sánchez ",
-        "email": "tomassanchez@mailto.com",
-        "password": "12345678",
-        "image": " ",
-        "category": " "
-    }
+ {
+  "id": "1",
+  "fullName": " Ana ",
+  "lastName": " Peréz ",
+  "email": "anaperez@mailto.com",
+  "password": "12345678",
+  "image": " ",
+  "category": " "
+ },
+ {
+  "id": "2",
+  "fullName": " Tomás ",
+  "lastName": " Sánchez ",
+  "email": "tomassanchez@mailto.com",
+  "password": "12345678",
+  "image": " ",
+  "category": " "
+ },
+ {
+  "id": "21",
+  "fullName": "usuario",
+  "mail": "usuario@hotmail.com",
+  "password": "$2a$10$8G9VW78aAJ.6prHIp9W4xeYqBtM5XfbBmot1AF5SLULanng4s7rDW",
+  "image": "user-1633656387602.jpg"
+ }
 ]
