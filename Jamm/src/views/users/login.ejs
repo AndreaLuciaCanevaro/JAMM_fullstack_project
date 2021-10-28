@@ -12,13 +12,13 @@
     </header>
 <br>
     <div class="contenedor-login">
-    <form action="/" method="POST" class="create-form">
+    <form action="/users/login" method="POST" class="create-form">
         <div class="control-formulario">
             <label>¡Recordanos quién sos!</label>
         </div>
         <div class="control-formulario">
             <label>Usuario o email:</label>
-            <input type="text" name="usuario" placeholder="Usuario o mail" class="control">
+            <input type="text" name="email" placeholder="Usuario o mail" class="control">
 
             <% if(locals.errors && errors.email) { %>
            <!-- ver esta clase-->

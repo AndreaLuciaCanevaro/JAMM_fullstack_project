@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const productsController= require("../controllers/productsController"); 
+const authMiddleware= require("../middlewares/authMiddleware"); 
 
 const multer = require('multer');
 const path = require('path');
@@ -38,7 +39,7 @@ router.post('/productCart', productsController.store);
 router.post('/products', upload.single('fotoProducto'), productsController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get("/edit/:id", productsController.edit);
+router.get("/edit/:id", authMiddleware, productsController.edit);
 router.put("/edit/:id", upload.single('fotoProducto'), productsController.update); 
 
 /*** DELETE ONE PRODUCT***/ 

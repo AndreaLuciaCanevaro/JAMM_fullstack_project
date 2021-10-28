@@ -27,7 +27,7 @@ const usersController = {
             delete userToLogin.password;
             req.session.userLogged = userToLogin;
             //Recordarme:
-            if(req.body.remember_user) {
+            if(req.body.recordarUsuario) {
                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })//crea una cookie y la guarda por: un minuto X 60 = una hora
             };
             return res.redirect('/users/userProfile');
@@ -90,7 +90,7 @@ const usersController = {
 
     logout: (req,res) => {
         //res.clearCookie ('userEmail');
-        console.log(req.session);
+      //  console.log(req.session);
         req.session.destroy();
         res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 0 })
         return res.redirect ('/');

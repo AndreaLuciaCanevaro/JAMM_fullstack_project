@@ -33,7 +33,7 @@ router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', upload.single('image'), validations, usersController.processRegister);
 
 //Formulario de userProfile
-router.get("/users/userProfile", userLoggedMiddleware, usersController.profile);
+// router.get("/users/userProfile", userLoggedMiddleware, usersController.profile);
 
 //Si las credenciales son válidas se redirige al usuario a esta ruta
 router.get ('/users/userProfile',authMiddleware,  usersController.profile);
