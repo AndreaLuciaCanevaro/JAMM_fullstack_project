@@ -28,22 +28,26 @@ module.exports = function (sequelize, dataTypes) {
         
         },
         created_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         },
         modified_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         },
         deleted_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         }
     }
     let config = {
         tableName: "Users",
-        timestamps: true  // aca ira true? porque las tengo creadas
+        timestamps: true,  // aca ira true? porque las tengo creadas
+        createdAt: "created_at",
+        updatedAt: "modified_at",
+        deletedAt: "deleted_at",
+        paranoid: true
     }
     let User = sequelize.define(alias, cols, config);
     User.associate = function(models) {        // como se relacionan las tablas
-        User.belongsToMany(models.products, {
+        User.belongsToMany(models.Products, {
             as: "products",
             through: "usersproducts",
             foreignKey: "user_id",

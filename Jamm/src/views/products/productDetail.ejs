@@ -9,18 +9,18 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-2">
-                        <img src="/images/<%= products[0].image %>" alt="Imagen" class="product_img" width="100%">
+                        <img src="/images/<%= products.image %>" alt="Imagen" class="product_img" width="100%"> 
                     </div>
                     <div class="col-2">
                         <div class="iconoFavoritos">
                         <a href="/productCart"><i class="far fa-heart"></i></a>
                         </div>
                         <div class="textoProducto">
-                            <h3 class="negro"><%= products[0].name %></h3>
-                            <h4>$<%= products[0].price %></h4>
-                            <p>En 12x de $<%= Math.round(products[0].price / 12) %></p>
+                            <h3 class="negro"><%= products.productName %></h3>
+                            <h4>$<%= products.price %></h4>
+                            <p>En 12x de $<%= Math.round(products.price / 12) %></p>
                             <h5>Descripción de producto:</h5>
-                            <p><%= products[0].description %></p>
+                            <p><%= products.description %></p>
                             <h5>Medios de pago:</h5>
                             <i class="fab fa-cc-visa"></i>
                             <i class="fab fa-cc-mastercard"></i>
@@ -34,6 +34,16 @@
                         <div class="boton-carrito">
                             <form action="/productCart" method="POST">
                             <button type="submit" class="boton-formulario2">Agregar al carrito</button>
+                            </form>
+                        </div>
+                        <div class="boton-editar">
+                            <a href="/edit/<%= products.id %>">
+                            <button type="submit" class="boton-formulario2">Editar</button>
+                            </a>
+                        </div>
+                        <div class="boton-eliminar">
+                            <form action="/delete/<%= products.id %>" method="POST">
+                            <button type="submit" class="boton-formulario2">Eliminar</button>
                             </form>
                         </div>
                     </div>

@@ -13,18 +13,18 @@
     </header>
 <br>
     <div class="contenedor-login">
-    <form action="/edit/<%= productToEdit[0].id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+    <form action="/edit/<%= products.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
         <div class="control-formulario">
             <label>Editar producto</label>
         </div>
         <div class="control-formulario">
             <label>Nombre del producto:</label>
-            <input type="text" name="nombreproducto" placeholder="Mouse XR3000" class="control" value="<%= productToEdit[0].name %>">
+            <input type="text" name="nombreproducto" placeholder="Mouse XR3000" class="control" value="<%= products.productName %>">
           
         </div> 
         <div class="control-formulario">
             <label>Descripción:</label>
-            <textarea type="text" name="descripcion" placeholder="Describe el producto" class="control"><%= productToEdit[0].description %></textarea>
+            <textarea type="text" name="descripcion" placeholder="Describe el producto" class="control"><%= products.description %></textarea>
         </div> 
         <div class="control-formulario">
             <input type="file" name="fotoProducto" accept=".jpg, .png" multiple>  <!-- cómo agregar imagen -->
@@ -33,18 +33,18 @@
             <label>Categoría:</label>
             <select name="categoria" class="control">
 
-                <% if (productToEdit[0].category === "Gaming") { %>
+                <% if (products.category === "Gaming") { %>
 							
                     <option value="">Elegí</option>
                     <option value="Gaming" selected>Gaming</option>
                     <option value="Accesorios">Accesorios</option>
                     <option value="Dispositivos">Dispositivos</option>
-                    <% } else if (productToEdit[0].category === "Accesorios") { %>
+                    <% } else if (products.category === "Accesorios") { %>
                     <option value="">Elegí</option>
                     <option value="Gaming">Gaming</option>
                     <option value="Accesorios" selected>Accesorios</option>
                     <option value="Dispositivos">Dispositivos</option>
-                    <% } else if (productToEdit[0].category === "Dispositivos") { %>
+                    <% } else if (products.category === "Dispositivos") { %>
                     <option value="">Elegí</option>
                     <option value="Gaming">Gaming</option>
                     <option value="Accesorios">Accesorios</option>
@@ -61,35 +61,35 @@
             <label>Color:</label>
             <select name="color" class="control">
 
-                <% if (productToEdit[0].color === "Blanco") { %>
+                <% if (products.color === "Blanco") { %>
                     <option value="">Elegí el color</option>
                     <option value="Blanco" selected>Blanco</option>
                     <option value="Negro">Negro</option>
                     <option value="Rojo">Rojo</option>
                     <option value="Azul">Azul</option>
                     <option value="Otro">Otro</option>
-                    <% } else if (productToEdit[0].color === "Negro") { %>
+                    <% } else if (products.color === "Negro") { %>
                     <option value="">Elegí el color</option>
                     <option value="Blanco">Blanco</option>
                     <option value="Negro" selected>Negro</option>
                     <option value="Rojo">Rojo</option>
                     <option value="Azul">Azul</option>
                     <option value="Otro">Otro</option>
-                    <% } else if (productToEdit[0].color === "Rojo") { %>
+                    <% } else if (products.color === "Rojo") { %>
                     <option value="">Elegí el color</option>
                     <option value="Blanco">Blanco</option>
                     <option value="Negro">Negro</option>
                     <option value="Rojo" selected>Rojo</option>
                     <option value="Azul">Azul</option>
                     <option value="Otro">Otro</option>
-                    <% } else if (productToEdit[0].color === "Azul") { %>
+                    <% } else if (products.color === "Azul") { %>
                     <option value="">Elegí el color</option>
                     <option value="Blanco">Blanco</option>
                     <option value="Negro">Negro</option>
                     <option value="Rojo">Rojo</option>
                     <option value="Azul" selected>Azul</option>
                     <option value="Otro">Otro</option>
-                    <% } else if (productToEdit[0].color === "Otro") { %>
+                    <% } else if (products.color === "Otro") { %>
                     <option value="">Elegí el color</option>
                     <option value="Blanco">Blanco</option>
                     <option value="Negro">Negro</option>
@@ -108,7 +108,7 @@
         </div>   
         <div class="control-formulario">
             <label>Precio $AR:</label>
-            <input type="number" name="precio" placeholder="200,50" class="control" value="<%= productToEdit[0].price %>">
+            <input type="number" name="precio" placeholder="200,50" class="control" value="<%= products.price %>">
         </div>   
         
         <div class="control-formulario">  
@@ -124,7 +124,7 @@
             </div>
     </form>
 
-    <form method="POST" action="/edit/<%= productToEdit[0].id %>?_method=DELETE">
+    <form method="POST" action="/edit/<%= products.id %>?_method=DELETE">
         <div class="control-formulario">  
             <button type="submit" class="boton-formulario-borrar">Eliminar producto</button>
             </div>

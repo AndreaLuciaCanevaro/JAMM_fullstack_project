@@ -30,8 +30,8 @@ const productsRoutes = require ("./routes/productsRoutes");
 const usersRoutes = require ("./routes/usersRoutes");
 
 app.use("/", mainRoutes);
-app.use("/", productsRoutes);
-app.use("/", usersRoutes);
+app.use("/", productsRoutes);    // duda si el "/" está bien o sería "/products".
+app.use("/", usersRoutes);       // duda si el "/" está bien o sería "/users".
 
 
 const path = require('path');

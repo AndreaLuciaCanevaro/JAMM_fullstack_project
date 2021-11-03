@@ -11,22 +11,26 @@ module.exports = function (sequelize, dataTypes) {
             allowNull: false
         },
         created_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         },
         modified_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         },
         deleted_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         }
     }
     let config = {
         tableName: "Categories",
-        timestamps: true
+        timestamps: true,
+        createdAt: "created_at",
+        updatedAt: "modified_at",
+        deletedAt: "deleted_at",
+        paranoid: true
     }
     let Category = sequelize.define(alias, cols, config);
     Category.associate = function(models) {        // como se relacionan las tablas
-        Category.hasMany(models.products, {
+        Category.hasMany(models.Products, {
             as: "products",
             foreignKey: "category_id"
         });

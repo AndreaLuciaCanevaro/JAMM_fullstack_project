@@ -29,33 +29,37 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING,        
         },
         created_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         },
         modified_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         },
         deleted_at: {
-            type: dataTypes.DATETIME
+            type: dataTypes.DATE
         }
     }
     let config = {
         tableName: "Products",
-        timestamps: true  // aca ira true? porque las tengo creadas
+        timestamps: true,  // aca ira true? porque las tengo creadas
+        createdAt: "created_at",
+        updatedAt: "modified_at",
+        deletedAt: "deleted_at",
+        paranoid: true
     }
     let Product = sequelize.define(alias, cols, config);
     Product.associate = function(models) {        // como se relacionan las tablas
-        Product.belongsToMany(models.users, {
+        Product.belongsToMany(models.Users, {
             as: "users",
             through: "usersproducts",
             foreignKey: "product_id",
             otherKey: "user_id",
             timestamps: true
         });
-        Product.belongsTo(models.category, {
+        Product.belongsTo(models.Category, {
             as: "category",
             foreignKey: "category_id"
         });
-        Product.belongsToMany(models.brands, {
+        Product.belongsToMany(models.Brands, {
             as: "brands",
             through: "productsbrands",
             foreignKey: "product_id",

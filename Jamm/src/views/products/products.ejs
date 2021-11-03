@@ -15,14 +15,14 @@
                 <h3 class="categorias">Todos los productos</h3>
                 <div class="products-b products productos-corregidos">
 
-                          <% products.forEach(function(prod){ %> 
+                          <% products.forEach(function(products){ %> 
 
                                 <article class="objeto">
 
-                                    <a href="/productDetail/<%= prod.id %>"><img src="images/<%= prod.image %>" alt="Imagen" class="product_img">
+                                    <a href="/productDetail/<%= products.id %>"><img src="images/<%= products.image %>" alt="Imagen" class="product_img">
                                                            
                                     <div class="main-article">
-                                <h4 class="description"><%= prod.name %></h4>
+                                <h4 class="description"><%= products.productName %></h4>
                                 </div>
                                 </article>
                                                             
