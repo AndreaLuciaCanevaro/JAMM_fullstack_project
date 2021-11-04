@@ -4,13 +4,10 @@ const User = require('../models/usersModels');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../../database/models');
-//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 /* Lista de usuarios .JSON */
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-//esta constante creo que hace lo mmismo que la línea 9 y 10
-//const usersDataBase = require ('../data/usersDataBase.json');
 
 const usersController = {
     login:(req,res) => {
@@ -20,10 +17,11 @@ const usersController = {
     processLogin: (req, res) => {
         let title = 'Logueate';
         let userToLogin = User.findByField('email',req.body.email);
+        db.Users.findAll() 
+        .then(users => {   
         if(userToLogin) {
         let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Para comparar usando encriptacion
-        //let correctPassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar, VER
-        
+               
         if (correctPassword) {
             delete userToLogin.password;
             req.session.userLogged = userToLogin;
@@ -49,7 +47,9 @@ const usersController = {
                 }
             }
         });
+        })
 },
+
     register:(req,res) => {
         let title= 'Registrate';
         res.render("users/register", {title: title});
@@ -62,6 +62,9 @@ const usersController = {
                                                                             //mapped() convierte un array en objeto literal
             return res.render('users/register' , { title: title, errors: validationsResult.mapped(), oldData: req.body});
         }
+        db.Users.findAll()   
+    	.then(users => {   
+
         let userInDB = User.findByField('email', req.body.email);
 		if (userInDB) {
 			return res.render('users/register', {
@@ -71,17 +74,35 @@ const usersController = {
 					}
 				},
 				oldData: req.body
-			});
-		}
-		let userToCreate = {
-			...req.body, //spread operator
-			password: bcryptjs.hashSync(req.body.password, 10),
-			image: req.file.filename
-		}
+			})
+		}else{
+		let userToCreate = ({
+            fullName: req.body.fullName,
+          userName: req.body.userName,
+          country: req.body.country,
+          email: req.body.email,
+          password: bcryptjs.hashSync(req.body.password, 10),
+          address: req.body.address,
+          avatar: req.file.filename,
+        })
+          .then(() => {
+            return res.redirect('/user/login')
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+      }
+    })
+},
 
-		User.create(userToCreate);
-		return res.redirect('/users/login');
-    },
+//			...req.body, //spread operator
+//			password: bcryptjs.hashSync(req.body.password, 10),
+//			image: req.file.filename
+//		}
+//		User.create(userToCreate);
+//		return res.redirect('/users/login');
+//    })
+//    },
 
     profile: (req, res) => {
         return res.render ('users/userProfile',{
