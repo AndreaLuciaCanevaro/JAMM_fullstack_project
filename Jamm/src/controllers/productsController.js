@@ -100,7 +100,7 @@ const controller = {
 
     borrar: function(req, res) {
         db.Products.destroy({
-            where: { product_id: parseInt(req.params.id, 10) },
+            where: { id: req.params.id },
             force: true,
           }) // force: true es para asegurar que se ejecute la acción
           .then(() => {
