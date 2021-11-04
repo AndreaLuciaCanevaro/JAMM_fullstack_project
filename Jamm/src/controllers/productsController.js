@@ -44,7 +44,8 @@ const controller = {
             let title = 'Lista de productos';        
             db.Products.findAll()
                 .then(products => { 
-                    res.render("products/products", {title: title, products: products});            
+                    //res.render("products/products", {title: title, products: products}); 
+                    res.json(products)           
                 })
                 .catch((error) => {
                     console.log(error);            

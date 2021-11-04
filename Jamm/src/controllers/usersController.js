@@ -3,6 +3,7 @@ const path = require('path');
 const User = require('../models/usersModels');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const db = require('../../database/models');
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 /* Lista de usuarios .JSON */
