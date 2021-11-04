@@ -21,7 +21,7 @@ const controller = {
 
     guardar: (req, res) => {
         if (req.file) {
-            db.Product.create({
+            db.Products.create({
                 productName: req.body.nombreproducto, 
                 description: req.body.descripcion,     
                 image: req.file.image,   // no estoy seguro si va asi
@@ -44,8 +44,7 @@ const controller = {
             let title = 'Lista de productos';        
             db.Products.findAll()
                 .then(products => { 
-                    //res.render("products/products", {title: title, products: products}); 
-                    res.json(products)           
+                    res.render("products/products", {title: title, products: products});                         
                 })
                 .catch((error) => {
                     console.log(error);            
@@ -53,30 +52,16 @@ const controller = {
     },
 
     detalle: function(req, res) {
-        //db.Products.findByPk(req.params.id, {
-        //    include: [{association: "category"}, {association: "users"}] //sale del "as" en la relacion
-        //})
-        //    .then(function(products) {
-        //        res.render("productDetail", {products: products}); //no se si es product o products
-        //    })
         db.Products.findByPk(req.params.id)
-                    .then(products => {                
-                        res.render("products/productDetail", {products:products, productId: req.params.id});
-                    })           
-                        .catch((error) => {                
-                        console.log(error);            
-                    });    
+            .then(products => {                
+                res.render("products/productDetail", {products:products, productId: req.params.id});
+            })           
+            .catch((error) => {                
+                console.log(error);            
+            });    
     },
 
     editar: (req, res) => {
-        //let pedidoProducto = db.Products.findByPk(req.params.id);
-
-        //let pedidoCategorias = db.Category.findAll()
-
-        //Promise.all([pedidoProducto, pedidoCategorias])
-        //    .then(function([products, category]) {
-        //        res.render("products/edit", {products: products, category: category});
-        //    })
         let title = 'Editar producto';
         let productRequest = db.Products.findByPk(req.params.id, {
             include: [{association: "category"}]
@@ -91,8 +76,10 @@ const controller = {
                         console.log(error);            
                     });
     },
-
+    
     actualizar: (req, res) => {
+        let id = req.params.id;
+        let prod = db.Products.findByPk(id);
         db.Products.update({
             productName: req.body.nombreproducto, 
             description: req.body.descripcion,     
@@ -102,10 +89,13 @@ const controller = {
             price: req.body.precio         
         }, {
             where: {
-                id: req.params.id
+                id: req.param.id
             }
-        });
-        res.redirect("/productDetail/" + req.params.id);
+        })
+        .then(() => {                
+            return res.redirect("/productDetail/" + id);            
+        })            
+        .catch(error => res.send(error))
     },
 
     borrar: function(req, res) {
