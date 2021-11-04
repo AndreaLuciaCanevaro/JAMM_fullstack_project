@@ -100,13 +100,14 @@ const controller = {
 
     borrar: function(req, res) {
         db.Products.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-        res.redirect("/products");
-    }
-
+            where: { product_id: parseInt(req.params.id, 10) },
+            force: true,
+          }) // force: true es para asegurar que se ejecute la acción
+          .then(() => {
+            return res.redirect("/products");
+          })
+          .catch((error) => res.send(error));
+    },
 
     //allProducts: (req,res) => {
     //    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
