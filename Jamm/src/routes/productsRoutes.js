@@ -21,7 +21,7 @@ const upload = multer({ storage });
 
 /*** CREAR PRODUCTOS ***/
 router.get("/crearProducto", productsController.crear);
-router.post("/crearProducto", upload.single("image"), productsController.guardar);   //terminar de ver
+router.post("/crearProducto", upload.single("fotoProducto"), productsController.guardar);   //terminar de ver
 
 /*** LISTAR PRODUCTOS ***/
 router.get("/products", productsController.listar);          
@@ -31,7 +31,7 @@ router.get("/productDetail/:id", productsController.detalle);
 
 /*** EDITAR PRODUCTO ***/
 router.get("/edit/:id", productsController.editar);
-router.put("/edit/:id", upload.single("image"), productsController.actualizar);  // terminar de ver
+router.post("/edit/:id", upload.single("fotoProducto"), productsController.actualizar);  // terminar de ver
 
 /*** BORRAR PRODUCTO ***/
 router.delete("/delete/:id", productsController.borrar); //terminar de ver

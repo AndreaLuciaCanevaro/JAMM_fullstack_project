@@ -20,12 +20,13 @@ const controller = {
     },
 
     guardar: (req, res) => {
+        
         if (req.file) {
             db.Products.create({
                 productName: req.body.nombreproducto, 
                 description: req.body.descripcion,     
-                image: req.file.image,   // no estoy seguro si va asi
-                category_id: req.body.categoria,
+                image: req.file.filename,   // no estoy seguro si va asi
+                category_id: 1,             // ver req.body.categoria
                 color: req.body.color,
                 price: req.body.precio         
 			})                
@@ -79,23 +80,22 @@ const controller = {
     
     actualizar: (req, res) => {
         let id = req.params.id;
-        let prod = db.Products.findByPk(id);
         db.Products.update({
             productName: req.body.nombreproducto, 
             description: req.body.descripcion,     
-            image: req.file.image,   // no estoy seguro si va asi
-            category_id: req.body.categoria,
+            image: req.file.filename,   // ver el caso de que no llegue una imagen mantenga lo anterior.
+            category_id: 1,    //modificar categoria req.body.categoria
             color: req.body.color,
             price: req.body.precio         
         }, {
             where: {
-                id: req.param.id
+                id: id
             }
         })
         .then(() => {                
             return res.redirect("/productDetail/" + id);            
         })            
-        .catch(error => res.send(error))
+        .catch(error => console.log(error))
     },
 
     borrar: function(req, res) {
