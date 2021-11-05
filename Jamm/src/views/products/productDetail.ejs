@@ -42,7 +42,7 @@
                             </a>
                         </div>
                         <div class="boton-eliminar">
-                            <form action="/delete/<%= products.id %>" method="POST">
+                            <form action="/delete/<%= products.id %>?_method=DELETE" method="POST">
                             <button type="submit" class="boton-formulario2">Eliminar</button>
                             </form>
                         </div>

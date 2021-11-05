@@ -31,10 +31,10 @@ router.get("/productDetail/:id", productsController.detalle);
 
 /*** EDITAR PRODUCTO ***/
 router.get("/edit/:id", productsController.editar);
-router.post("/edit/:id", upload.single("fotoProducto"), productsController.actualizar);  // terminar de ver
+router.put("/edit/:id", upload.single("fotoProducto"), productsController.actualizar);  // terminar de ver
 
 /*** BORRAR PRODUCTO ***/
-router.post("/delete/:id", productsController.borrar); //terminar de ver
+router.delete("/delete/:id", productsController.borrar); //terminar de ver
 
 /*** GET ALL PRODUCTS ***/ 
 //router.get("/products", productsController.allProducts);

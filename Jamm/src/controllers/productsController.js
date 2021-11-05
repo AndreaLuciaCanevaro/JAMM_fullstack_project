@@ -84,7 +84,7 @@ const controller = {
             productName: req.body.nombreproducto, 
             description: req.body.descripcion,     
             image: req.file.filename,   // ver el caso de que no llegue una imagen mantenga lo anterior.
-            category_id: 1,    //modificar categoria req.body.categoria
+            category_id: req.body.categoria,    
             color: req.body.color,
             price: req.body.precio         
         }, {
