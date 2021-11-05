@@ -30,11 +30,18 @@
         </div>
         <div class="control-formulario">
             <label>Categoría:</label>
-            <select name="categoria" class="control">              
-                <option value="Ninguna" selected disabled>Elegir categoría</option>
-                <option value="Gaming">Gaming</option>
-                <option value="Accesorios">Accesorios</option>
-                <option value="Dispositivos">Dispositivos</option>
+            <select name="categoria" class="control">  
+            <option value="Ninguna"  selected disabled> 
+                Elegir Categoria
+            </option>
+                <% for (let i = 0; i < category.length; i++ ) { %>
+                   
+                        <option value="<%= category[i].id %>">
+                            <%= category[i].name %>
+                        </option>               
+                                       
+                    <% } %>
+             
             </select>
         </div>   
         <div class="control-formulario">

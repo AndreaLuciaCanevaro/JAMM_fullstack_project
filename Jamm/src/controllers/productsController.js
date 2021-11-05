@@ -26,7 +26,7 @@ const controller = {
                 productName: req.body.nombreproducto, 
                 description: req.body.descripcion,     
                 image: req.file.filename,   // no estoy seguro si va asi
-                category_id: 1,             // ver req.body.categoria
+                category_id: req.body.categoria,            
                 color: req.body.color,
                 price: req.body.precio         
 			})                
@@ -80,10 +80,11 @@ const controller = {
     
     actualizar: (req, res) => {
         let id = req.params.id;
+        
         db.Products.update({
             productName: req.body.nombreproducto, 
             description: req.body.descripcion,     
-            image: req.file.filename,   // ver el caso de que no llegue una imagen mantenga lo anterior.
+            image: req.file?.filename ? req.file.filename : undefined,   
             category_id: req.body.categoria,    
             color: req.body.color,
             price: req.body.precio         
