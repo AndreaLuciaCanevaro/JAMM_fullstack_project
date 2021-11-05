@@ -39,7 +39,7 @@ module.exports = function (sequelize, dataTypes) {
         }
     }
     let config = {
-        tableName: "Products",
+        tableName: "products",
         timestamps: true,  // aca ira true? porque las tengo creadas
         createdAt: "created_at",
         updatedAt: "modified_at",
