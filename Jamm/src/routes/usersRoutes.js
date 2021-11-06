@@ -41,8 +41,4 @@ router.get ('/users/userProfile',authMiddleware,  usersController.profile);
 //Logout
 router.get ('/users/logout', usersController.logout);
 
-//Borrar un usuario 
-router.get('/delete/:id', usersController.delete);
-router.delete('/delete/:id', usersController.delete);
-
 module.exports = router;    

@@ -18,9 +18,9 @@ const usersController = {
     },
     processLogin: (req, res) => {
         let title = 'Logueate';
-        let userToLogin = User.findByField('email',req.body.email);
         db.Users.findAll() 
-        .then(users => {   
+        .then(users => {  
+        let userToLogin = users.find(i => i.email == req.body.email) 
         if(userToLogin) {
         let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Para comparar usando encriptacion
                
@@ -67,7 +67,7 @@ const usersController = {
         db.Users.findAll()   
     	.then(users => {   
 
-        let userInDB = User.findByField('email', req.body.email);
+        let userInDB = users.find(i => i.email == req.body.email) 
 		if (userInDB) {
 			return res.render('users/register', {
 				errors: {
@@ -78,14 +78,12 @@ const usersController = {
 				oldData: req.body
 			})
 		}else{
-		let userToCreate = ({
+		db.Users.create = ({
             fullName: req.body.fullName,
           userName: req.body.userName,
-          country: req.body.country,
           email: req.body.email,
           password: bcryptjs.hashSync(req.body.password, 10),
-          address: req.body.address,
-          avatar: req.file.filename,
+          image: req.file.filename,
         })
           .then(() => {
             return res.redirect('/users/login')
@@ -118,17 +116,7 @@ const usersController = {
         req.session.destroy();
         res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 0 })
         return res.redirect ('/');
-    },
-   
-    delete: function (req, res) {
-        db.Users.destroy({
-               where: { id: req.params.id }
-               ,force: true}) // force: true es para asegurar que se ejecute la acción
-           .then(() => {
-               return res.redirect('/')
-           })
-           .catch(error => res.send(error))
-         }
+    }
 };
 
 
