@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const User = require('../models/usersModels');
+const User = require('../models/usersModels'); // esta creo que ya no va
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../../database/models');
+
+const sequelize = db.sequelize; //?
 
 /* Lista de usuarios .JSON */
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
@@ -86,7 +88,7 @@ const usersController = {
           avatar: req.file.filename,
         })
           .then(() => {
-            return res.redirect('/user/login')
+            return res.redirect('/users/login')
           })
           .catch((error) => {
             console.log(error)
@@ -116,7 +118,17 @@ const usersController = {
         req.session.destroy();
         res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 0 })
         return res.redirect ('/');
-    }
+    },
+   
+    delete: function (req, res) {
+        db.Users.destroy({
+               where: { id: req.params.id }
+               ,force: true}) // force: true es para asegurar que se ejecute la acción
+           .then(() => {
+               return res.redirect('/')
+           })
+           .catch(error => res.send(error))
+         }
 };
 
 
