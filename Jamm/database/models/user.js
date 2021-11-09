@@ -24,7 +24,7 @@ module.exports = function (sequelize, dataTypes) {
         },
         category: {
             type: dataTypes.TINYINT,
-            allowNull: false,
+            allowNull: true
         
         },
         created_at: {

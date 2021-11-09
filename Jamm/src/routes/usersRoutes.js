@@ -24,7 +24,7 @@ const validationsMailPw= [
     body('password').isLength({min:8}).withMessage('contraseña incorrecta')
 ];
 //Procesar el login
-router.post('/users/login',validationsMailPw,usersController.processLogin);
+router.post('/users/login',validationsMailPw,usersController.loginProcess);
 
 //Formulario de registro
 router.get('/register', guestMiddleware, usersController.register);
@@ -37,6 +37,10 @@ router.post('/register', upload.single('image'), validations, usersController.pr
 
 //Si las credenciales son válidas se redirige al usuario a esta ruta
 router.get ('/users/userProfile',authMiddleware,  usersController.profile);
+
+//EDITAR DE USUARIO
+//router.get('/users/userEdit/:id', authMiddleware, userController.edit) // verificar ruta
+//router.put('/edit/:id', authMiddleware, uploadAvatar.single('image'), userController.update)
 
 //Logout
 router.get ('/users/logout', usersController.logout);

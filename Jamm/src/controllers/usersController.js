@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const User = require('../models/usersModels'); // esta creo que ya no va
-const bcryptjs = require('bcryptjs');
+//const User = require('../models/usersModels'); // esta creo que ya no va
 const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 const db = require('../../database/models');
 
 const sequelize = db.sequelize; //?
@@ -16,93 +16,90 @@ const usersController = {
         let title = 'Logueate';
         res.render("users/login", {title: title});
     },
-    processLogin: (req, res) => {
-        let title = 'Logueate';
-        db.Users.findAll() 
-        .then(users => {  
-        let userToLogin = users.find(i => i.email == req.body.email) 
-        if(userToLogin) {
-        let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Para comparar usando encriptacion
-               
-        if (correctPassword) {
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
-            //Recordarme:
-            if(req.body.recordarUsuario) {
-                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })//crea una cookie y la guarda por: un minuto X 60 = una hora
-            };
-            return res.redirect('/users/userProfile');
-    }
-            return res.render('users/login', {title: title,
-                errors: {
-                    email: {
-                        msg: 'Las credenciales son inválidas'
-                    }
-                }
-            });
+
+    loginProcess: (req, res) => {
+        let errors = validationResult(req)
+        if (errors.errors.length > 0) {
+            return res.render('users/login', {
+                errors: errors.mapped()
+            })
         }
-        //si no se encuentra el usuario en la base de datos
-        return res.render('users/login', {title: title,
-            errors: {
-                email: {
-                    msg: 'Este email no se encuentra registrado'
+        db.Users.findAll()
+            .then(users => {
+                let userToLogin = users.find(i =>
+                    i.email == req.body.email
+                )
+                if (userToLogin) {
+                    let loginUser = bcrypt.compareSync(req.body.password, userToLogin.password)
+
+                    if (loginUser) { //Eliminamos la clave y paso los datos al session
+                        delete userToLogin.password
+                        req.session.userLogged = userToLogin
+
+                        if (req.body.recordarUsuario) {
+                            res.cookie("userEmail", req.body.email, {
+                                maxAge: 60000
+                            })
+                        }
+                        res.redirect("/users/userProfile")
+                    }
+                    return res.render('users/login', {
+                        errors: {
+                            password: {
+                                msg: "Credenciales inválidas"
+                            }
+                        }
+                    })
                 }
-            }
-        });
-        })
-},
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: "Email no encontrado"
+                        }
+                    }
+                })
+            })
+
+    },
 
     register:(req,res) => {
         let title= 'Registrate';
         res.render("users/register", {title: title});
     },
+    
     processRegister: (req, res) => {
-        let title= 'Registrate';
-        let validationsResult = validationResult(req);
-        
-        if (!validationsResult.isEmpty()) {
-                                                                            //mapped() convierte un array en objeto literal
-            return res.render('users/register' , { title: title, errors: validationsResult.mapped(), oldData: req.body});
+        let resVal = validationResult(req);
+
+        if (resVal.errors.length > 0) {
+            return res.render("users/register", {
+                old: req.body,
+                errors: resVal.mapped()
+            })
         }
-        db.Users.findAll()   
-    	.then(users => {   
 
-        let userInDB = users.find(i => i.email == req.body.email) 
-		if (userInDB) {
-			return res.render('users/register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			})
-		}else{
-		db.Users.create = ({
-            fullName: req.body.fullName,
-          userName: req.body.userName,
-          email: req.body.email,
-          password: bcryptjs.hashSync(req.body.password, 10),
-          image: req.file.filename,
-        })
-          .then(() => {
-            return res.redirect('/users/login')
-          })
-          .catch((error) => {
-            console.log(error)
-          })
-      }
-    })
-},
-
-//			...req.body, //spread operator
-//			password: bcryptjs.hashSync(req.body.password, 10),
-//			image: req.file.filename
-//		}
-//		User.create(userToCreate);
-//		return res.redirect('/users/login');
-//    })
-//    },
+        //if (req.body.password != req.body.confirmation) {     // si agregamos confirmacion de contraseña
+        //    return res.render("users/register", {
+        //        old: req.body,
+        //        errors: {
+        //            password: {
+        //                msg: "Las contraseñas no coinciden"
+        //            }
+        //        }
+        //    })
+        //}
+        db.Users.create({
+                fullName: req.body.fullName,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                image: req.file.filename,
+            })
+            .then(() => {
+                res.redirect('/users/login');  // deberia redireccionar a users/userProfile
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    },
 
     profile: (req, res) => {
         return res.render ('users/userProfile',{
