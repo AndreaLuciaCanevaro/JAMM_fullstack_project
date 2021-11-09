@@ -38,9 +38,11 @@ router.post('/register', upload.single('image'), validations, usersController.pr
 //Si las credenciales son válidas se redirige al usuario a esta ruta
 router.get ('/users/userProfile',authMiddleware,  usersController.profile);
 
+
 //EDITAR DE USUARIO
-//router.get('/users/userEdit/:id', authMiddleware, userController.edit) // verificar ruta
-//router.put('/edit/:id', authMiddleware, uploadAvatar.single('image'), userController.update)
+router.get('/users/userEdit', authMiddleware, usersController.edit) // verificar ruta
+
+//router.put('/users/userEdit/:id', authMiddleware, uploadAvatar.single('image'), userController.update)
 
 //Logout
 router.get ('/users/logout', usersController.logout);

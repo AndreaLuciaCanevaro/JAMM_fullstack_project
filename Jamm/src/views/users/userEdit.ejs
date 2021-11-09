@@ -1,7 +1,58 @@
-<%- include ('partials/header.ejs') %>
-<h1>Register</h1>
-<form method='POST' action='user/edit?_method=PUT'>
-    <label for="">Editing User <%= userToEdit.name %></label>
-    <input type = "text" name="nombre" value="<%= userToEdit.name>">
-    <input type='submit' value='Editar'>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head" , {title:"Editar Usuario"}) %>
+
+<body>
+
+    <header class="header-login">
+        <div>
+            <a href="/"> <img src="/images/JAMM-Gaming.png" class="logo-login"></a>
+           
+        </div>
+          
+    </header>
+<br>
+    <div class="contenedor-login">
+    <form action="/users/userProfile/<%= users.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+        <div class="control-formulario">
+            <label>Editar usuario</label>
+        </div>
+        <div class="control-formulario">
+            <label>Nombre usuario:</label>
+            <input type="text" name="fullName" class="control" value="<%= users.fullName %>">
+          
+        </div> 
+        <div class="control-formulario">
+            <label>Mail:</label>
+            <input type="text" name="email" class="control" value="<%= users.email %>">
+        </div> 
+        <div class="control-formulario">
+            <input type="file" name="image" accept=".jpg, .png" multiple>  <!-- cómo agregar imagen -->
+        </div>
+        <div class="control-formulario">
+          
+        </div>   
+               
+        <div class="control-formulario">  
+
+        <button type="submit" class="boton-formulario">Confirmar edición</button>
+        
+        </div>
+
+            <div class="control-formulario">  
+
+            <button type="reset" class="boton-formulario">Cancelar</button>
+            
+            </div>
+    </form>
+
+    <form method="POST" action="/delete/<%= users.id %>?_method=DELETE">
+        <div class="control-formulario">  
+            <button type="submit" class="boton-formulario-borrar">Eliminar usuario</button>
+            </div>
+        </form>
+    </div>
+
+    </section>
+</body>
+</html>

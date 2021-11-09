@@ -102,9 +102,21 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        return res.render ('users/userProfile',{
-        user: req.session.userLogged
+    return res.render ('users/userProfile',{
+    user: req.session.userLogged
     });
+
+
+   // profile: (req, res) => { 
+   //     db.Users.findByPk(req.session.userLogged.id)
+   //       .then((user) => {
+    //        res.render('users/userProfile', {
+     //     user: user,
+      //  });
+//})
+
+
+
     },
 
     logout: (req,res) => {
@@ -113,7 +125,13 @@ const usersController = {
         req.session.destroy();
         res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 0 })
         return res.redirect ('/');
-    }
+    },
+    edit: (req, res) => {
+        db.Users.findByPk(req.session.userLogged.id)
+          .then(function (profileToEdit) {
+          res.render('users/userEdit', { profileToEdit: profileToEdit })
+        })
+      },
 };
 
 
