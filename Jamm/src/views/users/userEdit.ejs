@@ -13,18 +13,18 @@
     </header>
 <br>
     <div class="contenedor-login">
-    <form action="/users/userProfile/<%= users.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+    <form action="/users/userProfile/?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
         <div class="control-formulario">
             <label>Editar usuario</label>
         </div>
         <div class="control-formulario">
             <label>Nombre usuario:</label>
-            <input type="text" name="fullName" class="control" value="<%= users.fullName %>">
+            <input type="text" name="fullName" class="control" value="<%= userLogged.fullName %>">
           
         </div> 
         <div class="control-formulario">
             <label>Mail:</label>
-            <input type="text" name="email" class="control" value="<%= users.email %>">
+            <input type="text" name="email" class="control" value="<%= userLogged.email %>">
         </div> 
         <div class="control-formulario">
             <input type="file" name="image" accept=".jpg, .png" multiple>  <!-- cómo agregar imagen -->
@@ -46,7 +46,7 @@
             </div>
     </form>
 
-    <form method="POST" action="/delete/<%= users.id %>?_method=DELETE">
+    <form method="POST" action="/delete/<%= userLogged.id %>?_method=DELETE">
         <div class="control-formulario">  
             <button type="submit" class="boton-formulario-borrar">Eliminar usuario</button>
             </div>

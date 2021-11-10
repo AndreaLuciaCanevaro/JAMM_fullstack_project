@@ -18,13 +18,18 @@
    <div class="container" style="margin-top: 40px;">
     <div class="row">
         <div class="col-md-3">
-            <h2>Hola <%=user.fullName %></h2>
-            <img src="images/users/<%= user.image %>">
+            <h2>Hola <%=userLogged.fullName %></h2>
+            <img src="/images/users/<%= locals.userLogged.image %>">
             <br>
             <br>
-            <div class="alert alert-succes"><%= user.email %></div>
+            <div class="alert alert-succes"><%= userLogged.email %></div>
         </div>
     </div>
+</div>
+<div class="boton-editar">
+    <a href="/users/userEdit">
+    <button type="submit" class="boton-formulario2">Editar</button>
+    </a>
 </div>
 
 <%- include('../partials/footer') %>

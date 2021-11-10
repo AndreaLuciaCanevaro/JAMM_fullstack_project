@@ -132,6 +132,27 @@ const usersController = {
           res.render('users/userEdit', { profileToEdit: profileToEdit })
         })
       },
+
+      update: (req, res) => {
+        let id = req.session.userLogged.id;
+        
+        db.Users.update({
+            fullName: req.session.userLogged.fullName, 
+            email: req.session.userLogged.email,     
+            image: req.file?.filename ? req.file.filename : undefined,   
+            category: req.session.userLogged.category,    
+            password: req.session.userLogged.password,
+                    
+        }, {
+            where: {
+                id: id
+            }
+        })
+        .then(() => {                
+            return res.redirect("/users/userProfile");            
+        })            
+        .catch(error => console.log(error))
+    },
 };
 
 
