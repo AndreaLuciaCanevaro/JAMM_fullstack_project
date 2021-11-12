@@ -127,29 +127,43 @@ const usersController = {
         return res.redirect ('/');
     },
     edit: (req, res) => {
-        db.Users.findByPk(req.session.userLogged.id)
-          .then(function (profileToEdit) {
-          res.render('users/userEdit', { profileToEdit: profileToEdit })
-        })
-      },
+        let title = 'Editar Usuario';
+
+        db.Users.findOne({
+            where: {
+                email: req.session.userLogged.email
+            }
+            }).then(function(profileToEdit){
+
+       res.render('users/userEdit', {profileToEdit: profileToEdit});
+    });
+    },
+
+
+// Esto es lo que yo tenia
+ //       db.Users.findByPk(req.session.userLogged.id)
+ //         .then(function (profileToEdit) {
+  //        res.render('users/userEdit', { profileToEdit: profileToEdit })
+  //      })
+   //   },
 
       update: (req, res) => {
         let id = req.session.userLogged.id;
         
         db.Users.update({
-            fullName: req.session.userLogged.fullName, 
-            email: req.session.userLogged.email,     
+            fullName: req.body.fullName, 
+            email: req.body.email,     
             image: req.file?.filename ? req.file.filename : undefined,   
-            category: req.session.userLogged.category,    
-            password: req.session.userLogged.password,
+        //    category: req.session.userLogged.category,    
+        //    password: req.session.userLogged.password,
                     
         }, {
             where: {
-                id: id
+                email: req.body.email
             }
         })
         .then(() => {                
-            return res.redirect("/users/userProfile");            
+            res.redirect("/users/userProfile");            
         })            
         .catch(error => console.log(error))
     },
