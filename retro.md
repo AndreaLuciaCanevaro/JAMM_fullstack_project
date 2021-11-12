@@ -80,3 +80,23 @@ Temas a resaltar:
 
 <ul>Este punto sigue siendo similar a los sprints anteriores. Es dificil ser crítico en qué deberíamos dejar de hacer cuando cada uno de nosotros tiene responsabilidades por fuera de este curso. Somos todos conscientes que nos tomamos el proyecto seriamente pero muchas veces pasa que no podemos dedicarle el tiempo que deberíamos (le dedicamos MUCHO, pero a veces requiere mas). </ul>
 
+<h1>RETROSPECTIVA para encarar sprint 6<h1>
+<h3>Dinámica de la estrella de mar</h3>
+Temas a resaltar:
+
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+<ul> Comenzar el sprint con más tiempo para poder ir resolviendo los conflictos con más tiempo. </ul>
+
+<ul> Avanzar de a poco si quedan cosas no funcionales, de esa forma va a ser más fácil corregir errores. </ul>
+
+<ul> Seguir comunicándonos entre nosotros ante cualquier duda, consulta o cambio en el proyecto. </ul>
+
+<ul> Avanzar rápido a pesar de que hayan quedado cosas sin funcionar. Eso hace que sea más difícil corregirlas después. </ul>
+
+<ul>Este punto sigue siendo similar a los sprints anteriores. Es dificil ser crítico en qué deberíamos dejar de hacer cuando cada uno de nosotros tiene responsabilidades por fuera de este curso. Somos todos conscientes que nos tomamos el proyecto seriamente pero muchas veces pasa que no podemos dedicarle el tiempo que deberíamos (le dedicamos MUCHO, pero a veces requiere mas). </ul>
+
