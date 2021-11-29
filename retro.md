@@ -100,3 +100,23 @@ Temas a resaltar:
 
 <ul>Este punto sigue siendo similar a los sprints anteriores. Es dificil ser crítico en qué deberíamos dejar de hacer cuando cada uno de nosotros tiene responsabilidades por fuera de este curso. Somos todos conscientes que nos tomamos el proyecto seriamente pero muchas veces pasa que no podemos dedicarle el tiempo que deberíamos (le dedicamos MUCHO, pero a veces requiere mas). </ul>
 
+<h1>RETROSPECTIVA para encarar sprint 7<h1>
+<h3>Dinámica de la estrella de mar</h3>
+Temas a resaltar:
+
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+<ul> Arrancar el sprint más cerca de la fecha de inicio para no arrastrar dudas. </ul>
+
+<ul> Dedicarle más tiempo por fuera de las clases, porque aunque le dedicamos bastante, cada vez se precisa más. </ul>
+
+<ul> Seguir con la buena comunicación y clima de trabajo. </ul>
+
+<ul> Esperar que falte poco tiempo para la entrega para ajustar los detalles. </ul>
+
+<ul> Como acotamos en otros sprints. Somos conscientes que cada uno tiene tiempos distintos y más ocupaciones. Nos tomamos el proyecto con total seriedad, deberiamos dejar de lado otras responsabilidades para llegar mejor. </ul>
+
