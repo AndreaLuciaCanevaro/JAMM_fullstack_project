@@ -17,8 +17,8 @@ window.addEventListener("load",function(){
     
         //validación Descripción//
     let campoDescripcion = document.querySelector("textarea.productDescription");
-    if(campoDescripcion.value == "" ){
-    errores.push ("Debe completar el campo con alguna descripción");
+    if (campoDescripcion.value == "" ){
+    errores.push("Debe completar el campo con alguna descripción");
     } 
 
         //validación de Imagen//
