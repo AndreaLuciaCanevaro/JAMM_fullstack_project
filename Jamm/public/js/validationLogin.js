@@ -13,11 +13,13 @@ window.addEventListener("load",function(){
     errores.push ("Debe completar el campo con su email");
     } //else if (campoEmail.value == isEmail){
        // errores.push ("El campo mail debe contener el siguiente formato: usuario@email.com")}//
+
         //validación de password//
     let campoPassword = document.querySelector("input.password");
     if (campoPassword.value == ""){
     errores.push("Debe completar el campo con su contraseña");
     } //else if (campoPassword.value ...? validación de contraseña
+    
     //validación de imágen//
     /* let campoImage=document.querySelector("input.image");
     if (campoImage == ""){
