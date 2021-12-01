@@ -22,10 +22,10 @@ window.addEventListener("load",function(){
     } 
 
         //validación de Imagen//
-    /* let campoImage=document.querySelector("input.image");
-    if (campoImage == ""){
-    errores.push("Debe subir una imágen de perfil");
-    } */ //else if (campoImage.value ...? formato JPG, JPEG, PNG
+     let campoImagen = document.querySelector("input.productImage");
+    if (campoImagen.value == ""){
+    errores.push("Debe subir una imágen de producto");
+    }  //else if (campoImage.value ...? formato JPG, JPEG, PNG
 
         //validación de Categoría//
     let campoCategoria = document.querySelector("select.categoria");
