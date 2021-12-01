@@ -13,24 +13,27 @@
     </header>
 <br>
     <div class="contenedor-login">
+        <div class="errores">
+            <ul></ul>
+        </div>
     <form action="/crearProducto" method="POST" class="create-form" enctype="multipart/form-data">
         <div class="control-formulario">
             <label>Crear producto</label>
         </div>
         <div class="control-formulario">
             <label>Nombre del producto:</label>
-            <input type="text" name="nombreproducto" placeholder="Mouse XR3000" class="control">
+            <input type="text" name="nombreproducto" placeholder="Mouse XR3000" class="control productName">
         </div> 
         <div class="control-formulario">
             <label>Descripción:</label>
-            <textarea type="text" name="descripcion" placeholder="Describe el producto" class="control"> </textarea>
+            <textarea type="text" name="descripcion" placeholder="Describe el producto" class="control productDescription"> </textarea>
         </div> 
         <div class="control-formulario">
             <input type="file" name="fotoProducto" accept=".jpg, .png" multiple>
         </div>
         <div class="control-formulario">
             <label>Categoría:</label>
-            <select name="categoria" class="control">  
+            <select name="categoria" class="control categoria">  
             <option value="Ninguna"  selected disabled> 
                 Elegir Categoria
             </option>
@@ -46,7 +49,7 @@
         </div>   
         <div class="control-formulario">
             <label>Color:</label>
-            <select name="color" class="control">
+            <select name="color" class="control color">
             <option value="Niguno" selected disabled>Seleccionar color</option>
             <option value="Blanco">Blanco</option>
             <option value="Negro">Negro</option>
@@ -57,7 +60,7 @@
         </div>   
         <div class="control-formulario">
             <label>Precio $AR:</label>
-            <input type="number" name="precio" placeholder="200,50" class="control">
+            <input type="number" name="precio" placeholder="200,50" class="control precio">
         </div>   
         
         <div class="control-formulario">  
@@ -75,5 +78,6 @@
     </div>
 
     </section>
+    <script src="/js/validationCrearProducto.js" type="text/javascript"></script>
 </body>
 </html>
