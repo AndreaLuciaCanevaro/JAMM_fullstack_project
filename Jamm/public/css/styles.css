@@ -310,6 +310,7 @@ article div.main-article{
     justify-content: center;
     margin: auto;
 
+
     width: 50vw;
     box-shadow: 6px 5px #99154E;
     border: #99154E 3px solid;
@@ -464,4 +465,17 @@ i {
 
 .errores{
     color: red;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    align-items: flex-start;
+    justify-content: center;
+    margin: auto;
+    width: 50vw;
+    text-align: center;
+    padding: 10px;
 }
