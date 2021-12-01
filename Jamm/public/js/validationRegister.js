@@ -20,16 +20,18 @@ if(campoEmail.value == ""){
 errores.push ("Debe completar el campo con su email");
 } //else if (campoEmail.value == isEmail){
    // errores.push ("El campo mail debe contener el siguiente formato: usuario@email.com")}//
+
 	//validación de password//
 let campoPassword = document.querySelector("input.password");
 if (campoPassword.value == ""){
 errores.push("Debe completar el campo con su contraseña");
 } //else if (campoPassword.value ...? validación de contraseña
-//validación de imágen//
-/* let campoImage=document.querySelector("input.image");
-if (campoImage == ""){
+
+      //validación de imágen//
+let campoImage = document.querySelector("input.registerFormImg");
+if (campoImage.value == ""){
 errores.push("Debe subir una imágen de perfil");
-} */ //else if (campoImage.value ...? formato JPG, JPEG, PNG
+}  //else if (campoImage.value ...? formato JPG, JPEG, PNG
 
 if (errores.length>0) {
 let ulErrores = document.querySelector ("div.errores ul");
