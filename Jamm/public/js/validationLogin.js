@@ -1,52 +1,36 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document
-      .getElementById('formulario')
-      .addEventListener('submit', validarFormulario)
-  })
-  
-  function validarFormulario(evento) {
-    evento.preventDefault()
-  
-    /* Email */
-    var email = document.getElementById('email').value
-    errEmail = document.getElementById('errEmail')
-    const charEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+\.\S+/.test(email)
-    if (email === '') {
-      errEmail.classList.add('show')
-      errEmail.classList.remove('hidden')
-      errEmail.innerHTML = 'Enter your email F'
-      return
-    } else if (!charEmail) {
-      errEmail.classList.add('show')
-      errEmail.classList.remove('hidden')
-      errEmail.innerHTML = 'Invalid format F'
-      return
-    } else {
-      errEmail.classList.remove('show')
-      errEmail.classList.add('hidden')
+// Validación de LOGIN //
+window.addEventListener("load",function(){
+      
+    let formulario = document.querySelector(".create-form");
+    formulario.addEventListener("submit", function(e){
+          e.preventDefault();
+    
+    let errores=[];
+    
+        //validación de email//
+    let campoEmail = document.querySelector("input.email");
+    if(campoEmail.value == ""){
+    errores.push ("Debe completar el campo con su email");
+    } //else if (campoEmail.value == isEmail){
+       // errores.push ("El campo mail debe contener el siguiente formato: usuario@email.com")}//
+        //validación de password//
+    let campoPassword = document.querySelector("input.password");
+    if (campoPassword.value == ""){
+    errores.push("Debe completar el campo con su contraseña");
+    } //else if (campoPassword.value ...? validación de contraseña
+    //validación de imágen//
+    /* let campoImage=document.querySelector("input.image");
+    if (campoImage == ""){
+    errores.push("Debe subir una imágen de perfil");
+    } */ //else if (campoImage.value ...? formato JPG, JPEG, PNG
+    
+    if (errores.length>0) {
+    let ulErrores = document.querySelector ("div.errores ul");
+    ulErrores.innerHTML = "";
+    for (let i=0 ; i< errores.length ; i++) {
+    ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
+    }}else{
+          this.submit()
     }
-  
-    /* Password */
-    var password = document.getElementById('password').value
-    errPassword = document.getElementById('errPassword')
-    const charPass = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[^a-zA-Z0-9]).{8,}$/.test(
-      password,
-    )
-    if (password.length < 8) {
-      errPassword.classList.add('show')
-      errPassword.classList.remove('hidden')
-      errPassword.innerHTML = 'The password must be greater than 8 characters F'
-      return
-    } else if (!charPass) {
-      errPassword.classList.add('show')
-      errPassword.classList.remove('hidden')
-      errPassword.innerHTML =
-        'The password must contain uppercase, lowercase, number and special character F'
-      return
-    } else {
-      errPassword.classList.remove('show')
-      errPassword.classList.add('hidden')
-    }
-  
-    this.submit()
-  }
+    })
+    })
