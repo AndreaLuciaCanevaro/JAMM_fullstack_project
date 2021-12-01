@@ -1,7 +1,10 @@
 // Validación de REGISTRO //
 window.addEventListener("load",function(){
-let formulario=document.querySelector(".control-formulario");
-formulario.addEventListener("submit",function(e){
+      
+let formulario = document.querySelector(".create-form");
+formulario.addEventListener("submit", function(e){
+      e.preventDefault();
+
 let errores=[];
       //validación de fullName//
 let campoFullName = document.querySelector("input.fullName");
@@ -10,6 +13,7 @@ errores.push("Debe completar el campo con su nombre y apellido");
 } else if (campoFullName.value.length<3){
 errores.push("El campo debe tener al menos 2 caracteres");
 }
+console.log(errores)
 	//validación de email//
 let campoEmail=document.querySelector("input.email");
 if(campoEmail.value == ""){
@@ -28,10 +32,11 @@ errores.push("Debe subir una imágen de perfil");
 } */ //else if (campoImage.value ...? formato JPG, JPEG, PNG
 
 if (errores.length>0) {
-e.preventDefault();
 let ulErrores = document.querySelector ("div.errores ul");
 for (let i=0 ; i< errores.length ; i++) {
 ulErrores.innerHTML += "<li>" +errores [i] + "</li>"
-}}
+}}else{
+      e.submit()
+}
 })
 })

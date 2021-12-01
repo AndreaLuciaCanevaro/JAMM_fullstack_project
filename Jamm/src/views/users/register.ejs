@@ -20,7 +20,7 @@
         </div>
         <div class="control-formulario">
             <label>Nombre y apellido:</label>
-            <input type="text" name="fullName" placeholder="Juan Pérez" class="control" 
+            <input type="text" name="fullName" placeholder="Juan Pérez" class="control fullName" 
             
             value="<%= (locals.oldData && oldData.fullName) ? oldData.fullName : '' %>">
             <% if (locals.errors && errors.fullName) { %>
@@ -66,5 +66,6 @@
     </div>
 
     </section>
+    <script src="/js/index.js" type="text/javascript"></script>
 </body>
 </html>
