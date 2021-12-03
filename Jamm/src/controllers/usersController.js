@@ -94,7 +94,9 @@ const usersController = {
                 image: req.file.filename,
             })
             .then(() => {
-                res.redirect('/users/login');  // deberia redireccionar a users/userProfile
+                res.cookie("userEmail", req.body.email, {
+                    maxAge: 60000})
+                res.redirect('/users/userProfile'); 
             })
             .catch((error) => {
                 console.log(error);
