@@ -22,10 +22,10 @@ window.addEventListener("load",function(){
     errores.push("Debe completar el campo con su contraseña");
     } //else if (campoPassword.value ...? validación de contraseña
     
-    //validación de imágen//
+    //validación de imagen//
     /* let campoImage=document.querySelector("input.image");
     if (campoImage == ""){
-    errores.push("Debe subir una imágen de perfil");
+    errores.push("Debe subir una imagen de perfil");
     } */ //else if (campoImage.value ...? formato JPG, JPEG, PNG
     
     if (errores.length>0) {

@@ -1,7 +1,7 @@
 const multer = require('multer');
 const path = require('path');
 
-//middleware para carga de imágen de usuario
+//middleware para carga de imagen de usuario
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
                         //acá antes decía ../../public/images/users, agregué una barra al final

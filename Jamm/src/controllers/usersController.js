@@ -94,8 +94,9 @@ const usersController = {
                 image: req.file.filename,
             })
             .then(() => {
-                res.cookie("userEmail", req.body.email, {
-                    maxAge: 60000})
+       /*          req.session.userLogged = userToLogin;
+                res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 })
+     */
                 res.redirect('/users/userProfile'); 
             })
             .catch((error) => {

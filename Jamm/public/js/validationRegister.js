@@ -33,13 +33,13 @@ errores.push("Debe completar el campo con su contraseña");
       errores.push ("El campo password debe contener al menos un caracter")
 }; */
 
-      //validación de imágen//
+      //validación de imagen//
 let campoImage = document.querySelector("input.registerFormImg");
 var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 if (campoImage.value == ""){
-errores.push("Debe subir una imágen de perfil")
+errores.push("Debe subir una imagen de perfil")
 } else if (!allowedExtensions.exec(campoImage.value)) {
-  errores.push("Cargue un formato de imágen .jpeg/.jpg/.png/.gif")
+  errores.push("Cargue un formato de imagen .jpeg/.jpg/.png/.gif")
       
     };
 

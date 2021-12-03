@@ -30,7 +30,7 @@ router.post('/users/login',validationsMailPw,usersController.loginProcess);
 router.get('/register', guestMiddleware, usersController.register);
 
 //Procesar el registro
-router.post('/register', upload.single('image'), validations, usersController.processRegister);
+router.post('/register', upload.single('image'), validations, guestMiddleware, usersController.processRegister);
 
 //Formulario de userProfile
 // router.get("/users/userProfile", userLoggedMiddleware, usersController.profile);
