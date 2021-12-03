@@ -9,10 +9,12 @@ window.addEventListener("load",function(){
     
         //validación de email//
     let campoEmail = document.querySelector("input.email");
+    let emaill = campoEmail.value;
+    const charEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+\.\S+/.test(emaill);
     if(campoEmail.value == ""){
     errores.push ("Debe completar el campo con su email");
-    } //else if (campoEmail.value == isEmail){
-       // errores.push ("El campo mail debe contener el siguiente formato: usuario@email.com")}//
+    } else if (!charEmail){
+        errores.push ("El campo mail debe contener el siguiente formato: usuario@email.com")};
 
         //validación de password//
     let campoPassword = document.querySelector("input.password");

@@ -16,22 +16,32 @@ errores.push("El campo debe tener al menos 2 caracteres");
 }
 	//validación de email//
 let campoEmail = document.querySelector("input.email");
+let emaill = campoEmail.value;
+const charEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+\.\S+/.test(emaill);
 if(campoEmail.value == ""){
 errores.push ("Debe completar el campo con su email");
-} //else if (campoEmail.value == isEmail){
-   // errores.push ("El campo mail debe contener el siguiente formato: usuario@email.com")}//
+} else if (!charEmail){
+   errores.push ("El campo mail debe contener el siguiente formato: usuario@email.com")};
 
 	//validación de password//
 let campoPassword = document.querySelector("input.password");
+let passwordd = campoPassword.value;
+const charPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/.test(passwordd);
 if (campoPassword.value == ""){
 errores.push("Debe completar el campo con su contraseña");
-} //else if (campoPassword.value ...? validación de contraseña
+} /* else if (!charPass) {
+      errores.push ("El campo password debe contener al menos un caracter")
+}; */
 
       //validación de imágen//
 let campoImage = document.querySelector("input.registerFormImg");
+var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 if (campoImage.value == ""){
-errores.push("Debe subir una imágen de perfil");
-}  //else if (campoImage.value ...? formato JPG, JPEG, PNG
+errores.push("Debe subir una imágen de perfil")
+} else if (!allowedExtensions.exec(campoImage.value)) {
+  errores.push("Cargue un formato de imágen .jpeg/.jpg/.png/.gif")
+      
+    };
 
 if (errores.length>0) {
 let ulErrores = document.querySelector ("div.errores ul");

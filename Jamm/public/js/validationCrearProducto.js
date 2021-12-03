@@ -23,9 +23,12 @@ window.addEventListener("load",function(){
 
         //validación de Imagen//
      let campoImagen = document.querySelector("input.productImage");
+     var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
     if (campoImagen.value == ""){
     errores.push("Debe subir una imágen de producto");
-    }  //else if (campoImage.value ...? formato JPG, JPEG, PNG
+    }   else if (!allowedExtensions.exec(campoImagen.value)) {
+        errores.push("Cargue un formato de imágen .jpeg/.jpg/.png/.gif")
+    };
 
         //validación de Categoría//
     let campoCategoria = document.querySelector("select.categoria");
