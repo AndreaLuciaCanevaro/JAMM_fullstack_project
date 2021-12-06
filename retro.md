@@ -120,3 +120,23 @@ Temas a resaltar:
 
 <ul> Como acotamos en otros sprints. Somos conscientes que cada uno tiene tiempos distintos y más ocupaciones. Nos tomamos el proyecto con total seriedad, deberiamos dejar de lado otras responsabilidades para llegar mejor. </ul>
 
+<h1>RETROSPECTIVA para encarar sprint 8<h1>
+<h3>Dinámica de la estrella de mar</h3>
+Temas a resaltar:
+
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+<ul> Conocer todos el código que se fue cambiando por otras personas, para que en el caso de ser necesario corregirlo, ya saber cómo está formado. </ul>
+
+<ul> Dedicarle tiempo más seguido para que sea más leve cada reunión. </ul>
+
+<ul> La relación, comunicación y respeto en el grupo fue algo que siempre nos pareció muy destacable. </ul>
+
+<ul> Dejar cosas para el final. </ul>
+
+<ul> Esperar que falte poco para la entrega del Sprint para dedicarle mucho tiempo. </ul>
+
