@@ -1,5 +1,11 @@
 const express = require('express');
 const session = require ('express-session');
+
+// ESTO ES DE APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+const apiUsersRouter = require("./routes/api/users");
+const apiProductsRouter = require("./routes/api/products");
+
+
 const cookies = require ('cookie-parser');
 
 const app = express(); 
@@ -10,8 +16,15 @@ const mainRoutes = require ("./routes/mainRoutes");
 const productsRoutes = require ("./routes/productsRoutes");
 const usersRoutes = require ("./routes/usersRoutes");
 
+
+
+
 const path = require('path');
 const methodOverride = require('method-override');
+
+// ESTO ES DE APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+app.use("/api/users", apiUsersRouter);
+app.use("/api/products", apiProductsRouter);
 
 app.use(session({
     secret:'Esto es un secreto',
@@ -42,8 +55,11 @@ app.use("/", productsRoutes);    // duda si el "/" está bien o sería "/product
 app.use("/", usersRoutes);       // duda si el "/" está bien o sería "/users".
 
 
-app.listen(3010, ()=> console.log('Servidor funcionando'));
 
+
+
+
+app.listen(3010, ()=> console.log('Servidor funcionando'));
 
 
 
