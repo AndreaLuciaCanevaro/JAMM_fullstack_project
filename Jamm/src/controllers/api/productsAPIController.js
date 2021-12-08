@@ -19,7 +19,8 @@ const productsAPIController = {
 /*                         url: "http://localhost:3010/api/product/" + product.image,
 
  */                        },
-                        data: product
+                        data: product,
+                        //findAll  y despues un forEach por cada producto que categoria tiene
                         }
                     res.json(respuesta);
             })
