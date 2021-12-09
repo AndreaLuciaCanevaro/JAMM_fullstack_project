@@ -9,20 +9,40 @@ const productsAPIController = {
             attributes: ["id", "category_id", "productName", "image", "description", "price", "color"]
         })
             .then(product => {
+                
+                let categoryGaming = 0;
+                let categoryAccesorios = 0;
+                let categoryDispositivos = 0;
+
                 for  (let i = 0;i<product.length;i++){
                     product[i].setDataValue("url","http://localhost:3010/api/products/" + product[i].id)
-                  }
+
+                    if (product[i].category_id == "1") {
+                        categoryGaming++
+                    } if (product[i].category_id == "2") {
+                        categoryAccesorios++
+                    } if (product[i].category_id == "3") {
+                        categoryDispositivos++
+                    }
+                }
+                  
                 let respuesta = {
                     meta: {
                         status : 200,
                         total: product.length,
+                        productsByCategory: {
+                            Gaming: categoryGaming,
+                            Accesorios: categoryAccesorios,
+                            Dispositivos: categoryDispositivos
+                        }
 /*                         url: "http://localhost:3010/api/product/" + product.image,
 
  */                        },
-                        data: product,
+                    data: product,
+                   
                         //findAll  y despues un forEach por cada producto que categoria tiene
-                        }
-                    res.json(respuesta);
+                }
+                res.json(respuesta);
             })
     },
     'detail': (req, res) => {

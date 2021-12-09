@@ -4,7 +4,7 @@ import SmallCard from './SmallCard';
 let productInDataBase = {
     color:   "primary",
     titulo: "Total de Productos",
-    valor: 21,
+    valor: 21,      
     icono: "fas fa-gift",
 }
 
@@ -25,7 +25,7 @@ let user = {
 let cardProps = [productInDataBase,amount,user];
 
 
-function ContentRowTop(){
+function ContentRowCards(){
     return (
         <React.Fragment>
         {/*<!-- Content Row -->*/}
@@ -39,4 +39,4 @@ function ContentRowTop(){
         </React.Fragment>
     )
 }
-export default ContentRowTop;
+export default ContentRowCards;
