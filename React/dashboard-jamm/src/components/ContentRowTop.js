@@ -1,7 +1,7 @@
 import React from 'react';
 import imagenFondo from '../assets/images/mandalorian.jpg';
-import GenresInDb from './GenresInDb';
-import ContentRowMovies from './ContentRowMovies';
+import CategoriesInDb from './CategoriesInDb';
+import ContentRowCards from './ContentRowCards';
 
 function ContentRowTop(){
     return(
@@ -13,7 +13,7 @@ function ContentRowTop(){
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
+					<ContentRowCards />			{/* tarjeta productos - usuarios y categorias */}
 					{/*<!-- End movies in Data Base -->*/}
 					
 	
@@ -37,7 +37,7 @@ function ContentRowTop(){
 						{/*<!-- End content row last movie in Data Base -->*/}
 
 						{/*<!-- Genres in DB -->*/}
-						<GenresInDb />
+						<CategoriesInDb /> 			{/* panel de categorias */}
 
 						{/*<!--End Genres In Db-->*/}		
 					</div>

@@ -18,7 +18,7 @@ let amount ={
 let user = {
     color:   "warning",
     titulo: "Total de Categorías",
-    valor: 49,
+    valor: 3,
     icono: "fas fa-list-ul",
 }
 

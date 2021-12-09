@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Movie(){
+function ProductsInDb(){
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
@@ -43,4 +43,4 @@ function Movie(){
         </React.Fragment>
     )
 }
-export default Movie;
+export default ProductsInDb;

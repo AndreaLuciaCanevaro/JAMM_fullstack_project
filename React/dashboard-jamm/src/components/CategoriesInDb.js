@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Genre  from './Genre';
+import Product  from './Product';
 
 /* let genres = [
     {genre: 'Acción'},
@@ -14,23 +14,23 @@ import Genre  from './Genre';
     {genre: 'Musical'}
 ] */
 
-class GenresInDb extends Component {
+class CategoriesInDb extends Component {
     constructor(){
         super()
         this.state = {
-            genresList : [],
+            productsList : [],
             changeBackground : null
         }
     }
 
     componentDidMount(){
-        fetch('/api/genres')
+        fetch('http://localhost:3010/api/products')
         .then(respuesta =>{
             return respuesta.json()
         })
-        .then(genres =>{
-        //console.log(genres)
-            this.setState({genresList: genres.data})
+        .then(products =>{
+        //console.log(products)
+            this.setState({productsList: products.data})
         })
         .catch(error => console.log(error))
     }
@@ -54,8 +54,8 @@ class GenresInDb extends Component {
                         </div>
                         <div className= {`card-body fondoCaja ${this.state.changeBackground}`}>
                             <div className="row">
-                                {this.state.genresList.map((genre, index)=> {
-                                return <Genre {...genre} key={index} />
+                                {this.state.productsList.map((product, index)=> {
+                                return <Product {...product} key={index} />
                             })}
                             </div>
                         </div>
@@ -65,4 +65,4 @@ class GenresInDb extends Component {
         )
     }
 }
-export default GenresInDb;
+export default CategoriesInDb;
