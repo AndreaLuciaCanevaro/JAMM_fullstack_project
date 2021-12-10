@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require ('express-session');
 
+const cors = require('cors');
 // ESTO ES DE APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 const apiUsersRouter = require("./routes/api/users");
 const apiProductsRouter = require("./routes/api/products");
@@ -15,13 +16,13 @@ const userLoggedMiddleware = require ("./middlewares/userLoggedMiddleware");
 const mainRoutes = require ("./routes/mainRoutes"); 
 const productsRoutes = require ("./routes/productsRoutes");
 const usersRoutes = require ("./routes/usersRoutes");
-const cors = require('cors');
 
 
 
 const path = require('path');
 const methodOverride = require('method-override');
 
+app.use(cors());
 // ESTO ES DE APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 app.use("/api/users", apiUsersRouter);
 app.use("/api/products", apiProductsRouter);
@@ -40,7 +41,6 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(express.static ("../public"));
 
-app.use(cors());
 
 
 
