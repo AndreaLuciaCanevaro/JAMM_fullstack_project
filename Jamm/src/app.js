@@ -15,7 +15,7 @@ const userLoggedMiddleware = require ("./middlewares/userLoggedMiddleware");
 const mainRoutes = require ("./routes/mainRoutes"); 
 const productsRoutes = require ("./routes/productsRoutes");
 const usersRoutes = require ("./routes/usersRoutes");
-
+const cors = require('cors');
 
 
 
@@ -39,6 +39,10 @@ app.use(userLoggedMiddleware);
 app.use(express.urlencoded({extended:false}));
 
 app.use(express.static ("../public"));
+
+app.use(cors());
+
+
 
 
 app.set("view engine" , "ejs");
