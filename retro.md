@@ -140,3 +140,6 @@ Temas a resaltar:
 
 <ul> Esperar que falte poco para la entrega del Sprint para dedicarle mucho tiempo. </ul>
 
+
+Quiero ver si se rompio el push
+
