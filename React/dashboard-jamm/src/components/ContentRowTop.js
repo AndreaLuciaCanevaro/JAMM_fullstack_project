@@ -2,21 +2,46 @@ import React from 'react';
 import imagenFondo from '../assets/images/mandalorian.jpg';
 import CategoriesInDb from './CategoriesInDb';
 import ContentRowCards from './ContentRowCards';
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
+
+
+/* function UltimoProducto(){
+	const [products, setProducts] = useState([])	
+	const getLastProduct = async () => {
+		await fetch('http://localhost:3010/api/products') // cambiar API
+		  .then((response) => response.json())
+		  .then((data) => setProducts(data))
+	}
+	let ultimoProducto = products[products.length-1];
+
+	console.log(ultimoProducto)
+
+	  useEffect(() => {
+		getLastProduct()
+		}, []) 
+}*/
+	
+	/* let nombreApi = `http://localhost:3010/api/products/${ultimoProducto}`  */
+
 
 function ContentRowTop(){
 
-	const [products, setProducts] = useState([])
+	const [products, setProducts] = useState([])	
+	
+	/* let ultimoProducto = products[products.length-1]; */
+	/* let nombreApi = `http://localhost:3010/api/products/${ultimoProducto}`  */
+
+	/* console.log(ultimoProducto.id) */
+
 	const getProducts = async () => {
 	  await fetch('http://localhost:3010/api/products/18') // cambiar API
 		.then((response) => response.json())
 		.then((data) => setProducts(data))
 	}
 	useEffect(() => {
-	  getProducts()
-	}, [])
+		getProducts()
+	  }, [])
 
-	
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -61,4 +86,5 @@ function ContentRowTop(){
     )
 
 }
+
 export default ContentRowTop;
