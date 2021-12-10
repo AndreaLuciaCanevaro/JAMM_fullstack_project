@@ -32,8 +32,8 @@ const productsAPIController = {
                     meta: {
                         status : 200,
                         total: product.length,
-                        productsByCategory: 
-                            [{nombre:"Gaming", cantidad:categoryGaming},
+                        productsByCategory: [
+                            {nombre:"Gaming", cantidad:categoryGaming},
                             {nombre:"Accesorios", cantidad:categoryAccesorios},
                             {nombre:"Dispositivos", cantidad:categoryDispositivos}
                         ]

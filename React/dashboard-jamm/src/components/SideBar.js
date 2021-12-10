@@ -1,7 +1,29 @@
 import React from 'react';
 import image from '../assets/images/JAMM-Gaming.png';
+import { useEffect, useState } from 'react';
 
-function SideBar(){
+function SideBar() {
+    let [products, setProducts] = useState([])
+    let [users, setUsers] = useState([])
+  
+    let getUsers = () => {
+      fetch('http://localhost:3010/api/users')
+        .then((response) => response.json())
+        .then((data) => setUsers(data))
+    }
+    useEffect(() => {
+      getUsers()
+    }, [])
+  
+    let getProducts = () => {
+      fetch('http://localhost:3010/api/products')
+        .then((response) => response.json())
+        .then((data) => setProducts(data))
+    }
+    useEffect(() => {
+      getProducts()
+    }, [])
+  
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
@@ -10,7 +32,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-100" src={image} alt="Jamm Gaming"/>
                     </div>
                 </a>
 
@@ -32,9 +54,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
+                    <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Catálogo</span>
                     </a>
                 </li>
 
@@ -56,7 +78,8 @@ function SideBar(){
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             {/*<!-- End of Sidebar -->*/}
-            
+           
+           
         </React.Fragment>
     )
 }

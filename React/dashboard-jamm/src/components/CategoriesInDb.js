@@ -1,19 +1,6 @@
 import React, {Component} from 'react';
 import Product  from './Product';
 
-/* let genres = [
-    {genre: 'Acción'},
-    {genre: 'Animación'},
-    {genre: 'Aventura'},
-    {genre: 'Ciencia Ficción'},
-    {genre: 'Comedia'},
-    {genre: 'Documental'},
-    {genre: 'Drama'},
-    {genre: 'Fantasia'},
-    {genre: 'Infantiles'},
-    {genre: 'Musical'}
-] */
-
 class CategoriesInDb extends Component {
     constructor(){
         super()
