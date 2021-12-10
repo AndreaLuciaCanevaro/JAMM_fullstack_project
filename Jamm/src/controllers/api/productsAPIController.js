@@ -6,7 +6,9 @@ const Products = db.Product;
 const productsAPIController = {
     'list': (req, res) => {
         db.Products.findAll({
-            attributes: ["id", "category_id", "productName", "image", "description", "price", "color"]
+            attributes: ["id", "category_id", "productName", "image", "description", "price", "color"],
+            include: ["category"],
+
         })
             .then(product => {
                 
@@ -30,11 +32,11 @@ const productsAPIController = {
                     meta: {
                         status : 200,
                         total: product.length,
-                        productsByCategory: {
-                            Gaming: categoryGaming,
-                            Accesorios: categoryAccesorios,
-                            Dispositivos: categoryDispositivos
-                        }
+                        productsByCategory: 
+                            [{nombre:"Gaming", cantidad:categoryGaming},
+                            {nombre:"Accesorios", cantidad:categoryAccesorios},
+                            {nombre:"Dispositivos", cantidad:categoryDispositivos}
+                        ]
 /*                         url: "http://localhost:3010/api/product/" + product.image,
 
  */                        },

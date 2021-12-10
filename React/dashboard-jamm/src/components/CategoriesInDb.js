@@ -19,18 +19,20 @@ class CategoriesInDb extends Component {
         super()
         this.state = {
             productsList : [],
-            changeBackground : null
+            changeBackground : null, loading:true
         }
     }
 
     componentDidMount(){
+
         fetch('http://localhost:3010/api/products')
         .then(respuesta =>{
             return respuesta.json()
         })
         .then(products =>{
         //console.log(products)
-            this.setState({productsList: products.data})
+
+            this.setState({productsList: products, loading:false})
         })
         .catch(error => console.log(error))
     }
@@ -54,8 +56,9 @@ class CategoriesInDb extends Component {
                         </div>
                         <div className= {`card-body fondoCaja ${this.state.changeBackground}`}>
                             <div className="row">
-                                {this.state.productsList.map((product, index)=> {
-                                return <Product {...product} key={index} />
+                            
+                                {!this.state.loading && this.state.productsList.meta.productsByCategory.map((category, index)=> {
+                                return <Product category={category} key={index} />
                             })}
                             </div>
                         </div>
