@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const productsController= require("../controllers/productsController"); 
+const authAdminMiddleware= require("../middlewares/authAdminMiddleware"); 
 const authMiddleware= require("../middlewares/authMiddleware"); 
 
 const multer = require('multer');
@@ -20,8 +21,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /*** CREAR PRODUCTOS ***/
-router.get("/crearProducto", productsController.crear);
-router.post("/crearProducto", upload.single("fotoProducto"), productsController.guardar);   //terminar de ver
+router.get("/crearProducto", authAdminMiddleware, productsController.crear);
+router.post("/crearProducto", authAdminMiddleware, upload.single("fotoProducto"), productsController.guardar);
 
 /*** LISTAR PRODUCTOS ***/
 router.get("/products", productsController.listar);          
@@ -30,11 +31,11 @@ router.get("/products", productsController.listar);
 router.get("/productDetail/:id", productsController.detalle);
 
 /*** EDITAR PRODUCTO ***/
-router.get("/edit/:id", productsController.editar);
-router.put("/edit/:id", upload.single("fotoProducto"), productsController.actualizar);  // terminar de ver
+router.get("/edit/:id", authAdminMiddleware, productsController.editar);
+router.put("/edit/:id", authAdminMiddleware, upload.single("fotoProducto"), productsController.actualizar); 
 
 /*** BORRAR PRODUCTO ***/
-router.delete("/delete/:id", productsController.borrar); //terminar de ver
+router.delete("/delete/:id", authAdminMiddleware, productsController.borrar);
 
 /*** GET ALL PRODUCTS ***/ 
 //router.get("/products", productsController.allProducts);
