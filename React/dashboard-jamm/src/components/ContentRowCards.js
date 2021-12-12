@@ -10,7 +10,7 @@ function ContentRowCards(){
     const getProducts = async () => {
         await fetch('http://localhost:3010/api/products')
          .then((response) => response.json())
-         .then((data) => setProducts(data))
+         .then((data) => setProducts(data.meta))
      }
      useEffect(() => {
        getProducts()
@@ -19,7 +19,7 @@ function ContentRowCards(){
      const getUsers = async () => {
         await fetch('http://localhost:3010/api/users')
           .then((response) => response.json())
-          .then((data) => setUsers(data))
+          .then((data) => setUsers(data.meta))
       }
       useEffect(() => {
         getUsers()
@@ -28,21 +28,21 @@ function ContentRowCards(){
 let productInDataBase = {
     color:   "primary",
     titulo: "Total de Productos",
-    valor: 21 /* products.meta.total || "loading..." */ ,      
+    valor: products?.total || "Cargando..." ,      
     icono: "fas fa-gift",
 }
 
 let amount ={
     color:   "success",
     titulo: "Total de Usuarios",
-    valor:  40 /* users.meta.total || "loading..."  */,
+    valor:  users?.total || "Cargando...",
     icono: "fas fa-user",
 }
 
 let user = {
     color:   "warning",
     titulo: "Total de Categorías",
-    valor: 3 /* products.meta.productsByCategory.length || "loading..."  */,
+    valor: /* products?.productsByCategory.length || */ "Cargando...",
     icono: "fas fa-list-ul",
 }
 

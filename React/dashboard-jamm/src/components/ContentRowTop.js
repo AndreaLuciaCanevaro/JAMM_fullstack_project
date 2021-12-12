@@ -34,14 +34,14 @@ function ContentRowTop(){
 	/* console.log(ultimoProducto.id) */
 
 	const getProducts = async () => {
-	  await fetch('http://localhost:3010/api/products/18') // cambiar API
+	  await fetch('http://localhost:3010/api/products') // cambiar API
 		.then((response) => response.json())
-		.then((data) => setProducts(data))
+		.then((products) => setProducts(products.data))
 	}
 	useEffect(() => {
 		getProducts()
 	  }, [])
-
+	  let ultimoProducto = products[products.length-1];
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -61,14 +61,14 @@ function ContentRowTop(){
 						<div className="col-lg-6 mb-4">
             				<div className="card shadow mb-4">
                 				<div className="card-header py-3">
-                    				<h5 className="m-0 font-weight-bold text-gray-800">Último producto creado: {products.product}</h5> 
+                    				<h5 className="m-0 font-weight-bold text-gray-800">Último producto creado: {ultimoProducto?.productName || "Cargando..."}</h5> 
                 				</div>
                 				<div className="card-body">
                     				<div className="text-center">
-                        				<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={products.image} alt={products.productName}/>
+                        				<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={"http://localhost:3010/images/" + ultimoProducto?.image || "Cargando..."} alt={ultimoProducto?.productName || "Cargando..."}/>
                     				</div>
-                    				<p>Descripción: {products.description}</p>					
-									<p>Precio: ${products.price}</p>
+                    				<p>Descripción: {ultimoProducto?.description || "Cargando..."}</p>					
+									<p>Precio: ${ultimoProducto?.price || "Cargando..."}</p>
                 				</div>
             				</div>
         				</div>
