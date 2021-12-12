@@ -27,6 +27,12 @@ router.post("/crearProducto", authAdminMiddleware, upload.single("fotoProducto")
 /*** LISTAR PRODUCTOS ***/
 router.get("/products", productsController.listar);          
 
+
+/*** PRODUCT CART ***/
+router.get("/productCart", productsController.productCart);
+router.get("/emptyproductCart", productsController.emptyproductCart);
+
+
 /*** DETALLE DE PRODUCTO ***/
 router.get("/productDetail/:id", productsController.detalle);
 
@@ -43,9 +49,6 @@ router.delete("/delete/:id", authAdminMiddleware, productsController.borrar);
 /*** GET ONE PRODUCT ***/ 
 //router.get("/productDetail/:id", productsController.productDetail);
 
-/*** PRODUCT CART ***/
-//router.get("/productCart", productsController.productCart);
-//router.get("/emptyproductCart", productsController.emptyproductCart);
 
 
 /*** CREATE ONE PRODUCT ***/ 

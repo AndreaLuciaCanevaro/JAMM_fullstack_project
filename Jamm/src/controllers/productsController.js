@@ -120,12 +120,12 @@ const controller = {
     //    let product = products.filter (i => i.id === idProduct);
     //    res.render("products/productDetail", { products : product, toThousand: toThousand, dotToComma: dotToComma });
     //},
-    //emptyproductCart:(req,res) => {
-    //    res.render("emptyproductCart");
-    //},
-    //productCart:(req,res) => {
-    //    res.render("productCart");
-    //},
+    emptyproductCart:(req,res) => {
+        res.render("emptyproductCart");
+    },
+    productCart:(req,res) => {
+        res.render("productCart");
+    },
     //crearProducto:(req,res) => {
     //    res.render("products/crearProducto");
     //},
