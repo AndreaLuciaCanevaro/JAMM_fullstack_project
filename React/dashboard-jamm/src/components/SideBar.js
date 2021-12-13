@@ -28,7 +28,7 @@ function SideBar() {
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
             <ul className="navbar-nav  sidebar sidebar-dark accordion" 
-            style={{backgroundColor:"#EAC926"}} id="accordionSidebar">
+            style={{backgroundColor:"#ecb016"}} id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" style={{maxWidth:"100px"}} style={{marginTop:"25px"}} href="/">
