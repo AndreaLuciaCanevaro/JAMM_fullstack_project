@@ -27,10 +27,11 @@ function SideBar() {
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul className="navbar-nav  sidebar sidebar-dark accordion" 
+            style={{backgroundColor:"#EAC926"}} id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <a className="sidebar-brand d-flex align-items-center justify-content-center" style={{maxWidth:"100px"}} style={{marginTop:"25px"}} href="/">
                     <div className="sidebar-brand-icon">
                         <img className="w-100" src={image} alt="Jamm Gaming"/>
                     </div>
