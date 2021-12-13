@@ -193,7 +193,7 @@ article div.main-article{
 .productos-corregidos {
     display: flex;
     flex-wrap: wrap;
-    max-width: 40vw;
+
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -227,6 +227,10 @@ article div.main-article{
     .objeto:hover .description{
             display: block;
     }
+
+    .objetodos:hover .description{
+        display: block;
+}
 
     .products{
         display:flex;   
@@ -456,6 +460,14 @@ th:last-child{
 
 .objeto {
     background-color: #d83a7e;
+}
+.objetodos {
+    background-color: #d83a7e;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 20vw;
+
 }
 
 i {
