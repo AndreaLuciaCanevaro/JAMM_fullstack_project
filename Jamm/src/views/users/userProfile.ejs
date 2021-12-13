@@ -22,9 +22,17 @@
 </div>
 <div class="boton-editar centrar espacioabajo">
     <a href="/users/userEdit">
-    <button type="submit" class="boton-formulario2">Editar</button>
+    <button type="submit" class="boton-formulario2">Editar usuario</button>
     </a>
 </div>
+
+<% if (locals.isLogged && locals.userLogged.category == 'admin') { %>
+    <div class="boton-editar centrar espacioabajo">
+        <a href="/crearProducto %>">
+        <button type="submit" class="boton-formulario2">Crear producto</button>
+        </a>
+    </div>
+        <% } %>
 
 <div class="espacioloco"></div>
 </main>
