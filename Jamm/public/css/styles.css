@@ -172,6 +172,20 @@ article div.main-article{
     color:#91164b;
     text-decoration: none;
 }
+
+.espaciadoperfil {
+    padding-left: 10px;
+    font-weight: bold;
+    color:#91164b;
+    text-decoration: none;
+    text-align: center;
+}
+.centrar {
+    text-align: center;
+}
+.espacioabajo {
+    margin-bottom: 10px;
+}
 /* termima product detail */
 
 /* Intentando corregir como se muestran los productos en /products */
