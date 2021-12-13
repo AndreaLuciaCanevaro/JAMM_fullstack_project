@@ -32,7 +32,7 @@ const productsAPIController = {
                     meta: {
                         status : 200,
                         total: product.length,
-                        totalCategories: "3" ,                
+                        totalCategories: 3 ,                
                         productsByCategory: [
                             {nombre:"Gaming", cantidad:categoryGaming},
                             {nombre:"Accesorios", cantidad:categoryAccesorios},
