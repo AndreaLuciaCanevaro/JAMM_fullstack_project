@@ -380,7 +380,17 @@ footer div:hover{
     padding: 7px;
 }
 
-
+.quedateabajo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    bottom: 0px;
+ 
+  
+}
+.espacioloco{
+    padding: 50px;
+}
 /* productCart*/
 
 .cart-page{
