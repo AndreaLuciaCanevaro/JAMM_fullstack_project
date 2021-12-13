@@ -42,7 +42,7 @@ let amount ={
 let user = {
     color:   "warning",
     titulo: "Total de Categorías",
-    valor: /* products?.productsByCategory.length || */ "Cargando...",
+    valor: products?.totalCategories || "Cargando...",
     icono: "fas fa-list-ul",
 }
 
