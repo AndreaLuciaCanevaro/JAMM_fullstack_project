@@ -161,6 +161,17 @@ article div.main-article{
     margin-bottom: 5px;
 }
 
+
+.todoprod {
+    display: flex;    
+    flex-wrap: wrap;
+}
+.espaciadohref {
+    padding-left: 10px;
+    font-weight: bold;
+    color:#91164b;
+    text-decoration: none;
+}
 /* termima product detail */
 
 /* Intentando corregir como se muestran los productos en /products */
