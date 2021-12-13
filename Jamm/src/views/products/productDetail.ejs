@@ -36,6 +36,7 @@
                             <button type="submit" class="boton-formulario2">Agregar al carrito</button>
                             </form>
                         </div>
+                        <% if (locals.isLogged && locals.userLogged.category == 'admin') { %>
                         <div class="boton-editar">
                             <a href="/edit/<%= products.id %>">
                             <button type="submit" class="boton-formulario2">Editar</button>
@@ -46,6 +47,9 @@
                             <button type="submit" class="boton-formulario2">Eliminar</button>
                             </form>
                         </div>
+
+                        <% } %>
+
                     </div>
                 </div>
             </div>
