@@ -15,7 +15,7 @@ Disfrutá de la evolución que sólo te puede brindar JAMM Gaming. </br>
 <li> Joaquín Dimitrijevich: 28 años. Diseñador gráfico. Amante del deporte. Jugador de Rugby en Club Manuel Belgrano. Actualmente incursionando en el mundo de la programación.</li>
 <li> Martín Zanitto: 30 años. Analista funcional / Tester. Con la idea de convertirme en Dev </li>
 <li> Martín Taddia: 29 años. Licenciado en Turismo. De Rosario, viviendo en Buenos Aires. Con interés en formarme en el área de programación. </li>
-<li> Andrea Lucía Canevaro: 34 años. Contadora y profesora de economía. Yogui, salsera y próximamente nómade digital. </li>
+<li> Andrea Lucía Canevaro: 34 años. Contadora y profesora de economía. </li>
 </ul>
 
 <p> Sitios web de referencia:</p>
